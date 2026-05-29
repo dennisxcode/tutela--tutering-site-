@@ -16,17 +16,43 @@ export const content = {
     contact: { zh: "联系我", en: "Contact me" },
   },
   hero: {
-    tag: { zh: "中学入学考试备考", en: "Secondary admission exam prep" },
+    tag: { zh: "蒙特利尔 · 中学入学考试备考", en: "Montreal · Secondary admission exam prep" },
     title: { zh: "中学入学考试辅导", en: "Secondary Admission Exam Tutoring" },
     subtitle: {
       zh: "我们是刚刚考过入学考试的尖子生，帮助孩子顺利通过考试。",
       en: "We're top students who just passed the admission exams, here to help your child pass theirs.",
+    },
+    trial: {
+      zh: "首次免费试听 · 满意再报名",
+      en: "First lesson free — enrol only if you're happy",
     },
     chips: [
       { zh: "5–10 人小班", en: "Small classes of 5–10" },
       { zh: "数学 · 法语 · 英语", en: "Math · French · English" },
       { zh: "周六上午授课", en: "Saturday mornings" },
     ],
+  },
+  stats: [
+    { value: { zh: "5–10", en: "5–10" }, label: { zh: "人 / 每班", en: "per class" } },
+    { value: { zh: "3", en: "3" }, label: { zh: "门科目", en: "subjects" } },
+    { value: { zh: "周六", en: "Sat" }, label: { zh: "上午授课", en: "mornings" } },
+  ] as { value: Bi; label: Bi }[],
+  whyUs: {
+    title: { zh: "为什么选择我们", en: "Why choose us" },
+    points: [
+      {
+        zh: "我们刚刚考过同样的入学考试，最清楚考什么、该怎么准备。",
+        en: "We just sat the same admission exams ourselves — we know exactly what they test and how to prepare.",
+      },
+      {
+        zh: "导师均就读于魁北克顶尖中学，包括 Collège Jean-de-Brébeuf。",
+        en: "Our tutors all attend top Quebec secondary schools, including Collège Jean-de-Brébeuf.",
+      },
+      {
+        zh: "5–10 人小班，名额有限，确保每个孩子都得到充分关注。",
+        en: "Small classes of 5–10 with limited spots, so every child gets real attention.",
+      },
+    ] as Bi[],
   },
   whoWeAre: {
     title: { zh: "关于我们", en: "Who we are" },
@@ -64,8 +90,8 @@ export const content = {
   howItWorks: {
     title: { zh: "上课方式", en: "How it works" },
     body: {
-      zh: "小组课程在每周六上午9点至12点进行。每组人数设定在5至10人，这样每个孩子都能得到足够的关注。我们提供线下和线上两种形式，会根据孩子的情况来安排。上课地点正在确认中，确定后会通知。",
-      en: "Group classes run every Saturday, 9:00 AM–12:00 PM. Each group is kept to 5–10 students so every child gets enough attention. We offer both in-person and online formats, arranged to suit your child. The class location is being finalized and will be announced once confirmed.",
+      zh: "小组课程在每周六上午9点至12点进行。每组人数设定在5至10人，这样每个孩子都能得到足够的关注。我们采用线下 + 线上结合的方式，根据孩子的情况灵活安排。上课地点正在确认中，确定后会第一时间在家长群通知。",
+      en: "Group classes run every Saturday, 9:00 AM–12:00 PM. Each group is kept to 5–10 students so every child gets enough attention. We combine in-person and online formats, arranged to suit your child. The class location is being finalized and will be announced in the parents' group as soon as it's confirmed.",
     },
   },
   pricing: {
@@ -138,6 +164,14 @@ export const content = {
     contactLabel: { zh: "联系人", en: "Contact" },
     contactName: "Dennis",
     note: { zh: "有问题欢迎私信。", en: "Message us with any questions." },
+    privacy: {
+      zh: "您的联系方式仅用于课程沟通，不会用于其他用途。",
+      en: "Your contact details are used only to reach you about classes.",
+    },
+    copyright: {
+      zh: "© 2026 Tutela · 蒙特利尔升学辅导",
+      en: "© 2026 Tutela · Montreal admission-exam tutoring",
+    },
   },
 };
 

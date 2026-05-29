@@ -14,12 +14,22 @@ export function FooterCta() {
           <WeChatCta />
           <p className="mt-4 text-center text-sm text-white/70">{t(content.footer.note)}</p>
         </div>
-        <div className="mt-10 flex items-center justify-center gap-2 text-white">
-          <Logo className="h-6 w-6" />
-          <span className="font-display text-xl font-semibold italic leading-none">
-            {t(content.meta.brand)}
+        <div className="mt-10 flex flex-col items-center gap-3 text-center">
+          <span className="flex items-center gap-2 text-white">
+            <Logo className="h-6 w-6" />
+            <span className="font-display text-xl font-semibold italic leading-none">
+              {t(content.meta.brand)}
+            </span>
           </span>
+          <p className="max-w-xs text-xs leading-relaxed text-white/50">
+            {t(content.footer.privacy)}
+          </p>
         </div>
+      </div>
+      <div className="border-t border-white/10">
+        <p className="mx-auto max-w-content px-5 py-5 text-center text-xs text-white/40">
+          {t(content.footer.copyright)}
+        </p>
       </div>
     </footer>
   );
