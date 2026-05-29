@@ -14,6 +14,7 @@ const config: Config = {
         accent: "#c0532b",
         body: "#2b2b28",
       },
+      // `--font-noto-sans-sc` is injected by next/font in app/layout.tsx — keep it.
       fontFamily: {
         sans: ["var(--font-noto-sans-sc)", "system-ui", "sans-serif"],
       },
