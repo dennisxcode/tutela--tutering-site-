@@ -27,7 +27,7 @@ export function FooterCta() {
         </div>
       </div>
       <div className="border-t border-white/10">
-        <p className="mx-auto max-w-content px-5 py-5 text-center text-xs text-white/40">
+        <p className="mx-auto max-w-content px-5 pt-5 pb-24 text-center text-xs text-white/40 sm:pb-5">
           {t(content.footer.copyright)}
         </p>
       </div>

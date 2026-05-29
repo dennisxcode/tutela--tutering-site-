@@ -120,6 +120,23 @@ export const content = {
       en: "Our information session is on June 19, 7:00–9:00 PM — all parents welcome. We'll cover pricing, the class schedule, and how we prepare the children, with a Q&A. Location to be confirmed; we'll notify you of any changes.",
     },
   },
+  enrol: {
+    title: { zh: "报名流程", en: "How to enrol" },
+    steps: [
+      {
+        zh: "扫码加微信，私信联系我们。",
+        en: "Scan the QR code and message us on WeChat.",
+      },
+      {
+        zh: "先参加说明会，详细了解课程内容与备考安排。",
+        en: "Join the information session first to learn how the courses and exam prep work.",
+      },
+      {
+        zh: "确认报名后，我们会邀请您加入家长群，及时同步上课信息。",
+        en: "Once you enrol, we'll add you to the parents' group so you get all the class updates.",
+      },
+    ] as Bi[],
+  },
   faq: [
     {
       q: { zh: "你们是怎么收费的？", en: "How do you charge?" },
@@ -159,6 +176,10 @@ export const content = {
   ] as { q: Bi; a: Bi }[],
   footer: {
     cta: { zh: "扫码联系我", en: "Scan to contact me" },
+    scanHint: {
+      zh: "扫一扫，添加微信咨询与报名。",
+      en: "Scan to add us on WeChat for questions and enrolment.",
+    },
     wechatIdLabel: { zh: "微信号", en: "WeChat ID" },
     wechatId: { zh: "wxid_qs6tqmt94en122", en: "wxid_qs6tqmt94en122" },
     contactLabel: { zh: "联系人", en: "Contact" },

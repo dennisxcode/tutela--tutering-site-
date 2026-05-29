@@ -17,9 +17,7 @@ export function WeChatCta() {
         className="rounded-lg border border-ink/15 bg-white p-2"
       />
       <p className="font-semibold text-white">{t(content.footer.cta)}</p>
-      <p className="text-sm text-white/70">
-        {t(content.footer.wechatIdLabel)}: {content.footer.wechatId.en}
-      </p>
+      <p className="max-w-xs text-sm text-white/70">{t(content.footer.scanHint)}</p>
       <p className="text-sm text-white/70">
         {t(content.footer.contactLabel)}: {content.footer.contactName}
       </p>
