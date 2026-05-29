@@ -14,7 +14,7 @@ export function Faq() {
         {content.faq.map((item, i) => (
           <div key={i}>
             <dt className="font-semibold text-ink">{t(item.q)}</dt>
-            <dd className="mt-1 text-base leading-relaxed text-body/85">{t(item.a)}</dd>
+            <dd className="mt-1 text-base leading-relaxed text-body/80">{t(item.a)}</dd>
           </div>
         ))}
       </dl>
