@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Noto_Sans_SC } from "next/font/google";
+import { Noto_Sans_SC, Fraunces } from "next/font/google";
 import "./globals.css";
 import { content } from "@/lib/content";
 
@@ -12,6 +12,16 @@ const noto = Noto_Sans_SC({
   variable: "--font-noto-sans-sc",
 });
 
+// Display serif used only for the "Tutela" wordmark — gives the brand
+// some character. Latin-only, so a subset is fine here.
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  weight: ["600"],
+  style: ["normal", "italic"],
+  display: "swap",
+  variable: "--font-fraunces",
+});
+
 export const metadata: Metadata = {
   title: content.meta.title.zh,
   description: content.meta.description.zh,
@@ -19,7 +29,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="zh-CN" className={noto.variable}>
+    <html lang="zh-CN" className={`${noto.variable} ${fraunces.variable}`}>
       <body className="font-sans antialiased">{children}</body>
     </html>
   );

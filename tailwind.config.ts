@@ -17,6 +17,7 @@ const config: Config = {
       // `--font-noto-sans-sc` is injected by next/font in app/layout.tsx — keep it.
       fontFamily: {
         sans: ["var(--font-noto-sans-sc)", "system-ui", "sans-serif"],
+        display: ["var(--font-fraunces)", "Georgia", "serif"],
       },
       maxWidth: { content: "42rem" },
     },

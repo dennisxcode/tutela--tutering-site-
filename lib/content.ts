@@ -2,12 +2,15 @@ export type Bi = { zh: string; en: string };
 
 export const content = {
   meta: {
-    title: { zh: "中学入学考试辅导", en: "Secondary Admission Exam Tutoring" },
+    title: {
+      zh: "Tutela · 中学入学考试辅导",
+      en: "Tutela · Secondary Admission Exam Tutoring",
+    },
     description: {
       zh: "由刚刚考过入学考试的尖子生提供的中学入学考试小组辅导。",
       en: "Small-group secondary admission exam tutoring by students who just aced the exams.",
     },
-    brand: { zh: "入学考试辅导", en: "Admission Exam Tutoring" },
+    brand: { zh: "Tutela", en: "Tutela" },
   },
   nav: {
     contact: { zh: "联系我", en: "Contact me" },
