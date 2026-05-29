@@ -57,8 +57,8 @@ export const content = {
   whoWeAre: {
     title: { zh: "关于我们", en: "Who we are" },
     body: {
-      zh: "我们是来自魁北克顶尖学校的中学生，包括 Collège Jean-de-Brébeuf。我们都参加过中学入学考试，知道考试考什么、怎么考，也明白孩子需要准备什么。我们用自己的经验来帮助孩子备考。",
-      en: "We're secondary students from top Quebec schools, including Collège Jean-de-Brébeuf. We've all taken the secondary admission exams ourselves — we know what they test, how they work, and what your child needs to prepare. We use that first-hand experience to help your child get ready.",
+      zh: "我们是来自魁北克顶尖中学的学生，包括 Collège Jean-de-Brébeuf。我们刚刚走过中学入学考试这条路，希望把自己的备考经验，分享给正在准备的孩子和家庭。",
+      en: "We're students from top Quebec secondary schools, including Collège Jean-de-Brébeuf. We've just been through the secondary admission exams ourselves, and we want to share what we learned with the children and families preparing for them now.",
     },
   },
   whatWeOffer: {
@@ -150,7 +150,7 @@ export const content = {
       },
     },
     {
-      q: { zh: "group class 通常是几个人？", en: "How many students are in a group class?" },
+      q: { zh: "小班课通常有几个人？", en: "How many students are in a group class?" },
       a: {
         zh: "我们将每组人数设定在5至10人，这样每个孩子都能得到足够的关注，学习效果更好。",
         en: "We keep groups to 5–10 students so every child gets enough attention and learns better.",
@@ -204,6 +204,10 @@ export const content = {
     scanHint: {
       zh: "扫一扫，添加微信咨询与报名。",
       en: "Scan to add us on WeChat for questions and enrolment.",
+    },
+    qrHelp: {
+      zh: "手机访问：在微信中长按二维码即可识别；或截图保存后用「扫一扫」从相册识别。",
+      en: "On a phone: long-press the QR in WeChat to recognise it, or save a screenshot and scan it from your album.",
     },
     wechatIdLabel: { zh: "微信号", en: "WeChat ID" },
     wechatId: { zh: "wxid_qs6tqmt94en122", en: "wxid_qs6tqmt94en122" },

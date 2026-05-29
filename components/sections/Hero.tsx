@@ -8,7 +8,17 @@ import { CtaButton } from "@/components/CtaButton";
 export function Hero() {
   const { t } = useLanguage();
   return (
-    <section className="mx-auto max-w-content px-5 pb-12 pt-14">
+    <section className="relative overflow-hidden">
+      <svg
+        viewBox="0 0 32 32"
+        fill="none"
+        aria-hidden
+        className="pointer-events-none absolute -right-12 top-1/2 hidden h-80 w-80 -translate-y-1/2 text-ink/[0.05] md:block lg:right-[6%]"
+      >
+        <path d="M8 25 Q8 11 16 6" stroke="currentColor" strokeWidth={2} strokeLinecap="round" />
+        <path d="M24 25 Q24 11 16 6" stroke="currentColor" strokeWidth={2} strokeLinecap="round" />
+      </svg>
+      <div className="relative mx-auto max-w-content px-5 pb-12 pt-14">
       <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-ink">
         {t(content.hero.tag)}
       </p>
@@ -35,6 +45,7 @@ export function Hero() {
           </li>
         ))}
       </ul>
+      </div>
     </section>
   );
 }

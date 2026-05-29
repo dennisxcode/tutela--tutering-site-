@@ -21,6 +21,9 @@ export function WeChatCta() {
       <p className="text-sm text-white/70">
         {t(content.footer.contactLabel)}: {content.footer.contactName}
       </p>
+      <p className="mt-1 max-w-xs text-xs leading-relaxed text-white/50">
+        {t(content.footer.qrHelp)}
+      </p>
     </div>
   );
 }
