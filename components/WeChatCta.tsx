@@ -9,18 +9,19 @@ export function WeChatCta() {
   // Note: WeChatCta is used inside the dark FooterCta; text colors are white for contrast.
   return (
     <div className="flex flex-col items-center gap-3 text-center">
-      {/* unoptimized: Next's image optimizer rejects SVG; remove this when a raster QR replaces the placeholder */}
       <Image
-        src="/wechat-qr-placeholder.svg"
+        src="/wechat-qr.png"
         alt={t(content.footer.cta)}
-        width={180}
-        height={180}
-        unoptimized
+        width={200}
+        height={272}
         className="rounded-lg border border-ink/15 bg-white p-2"
       />
       <p className="font-semibold text-white">{t(content.footer.cta)}</p>
       <p className="text-sm text-white/70">
-        {t(content.footer.wechatIdLabel)}: {t(content.footer.wechatId)}
+        {t(content.footer.wechatIdLabel)}: {content.footer.wechatId.en}
+      </p>
+      <p className="text-sm text-white/70">
+        {t(content.footer.contactLabel)}: {content.footer.contactName}
       </p>
     </div>
   );

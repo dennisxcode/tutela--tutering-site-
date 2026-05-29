@@ -132,8 +132,9 @@ export const content = {
   footer: {
     cta: { zh: "扫码加入家长群", en: "Scan to join the parents' group" },
     wechatIdLabel: { zh: "微信号", en: "WeChat ID" },
-    // Bilingual placeholder only; replace both with the same real WeChat ID before launch.
-    wechatId: { zh: "（待提供）", en: "(to provide)" },
+    wechatId: { zh: "wxid_qs6tqmt94en122", en: "wxid_qs6tqmt94en122" },
+    contactLabel: { zh: "联系人", en: "Contact" },
+    contactName: "Dennis",
     note: { zh: "有问题欢迎私信。", en: "Message us with any questions." },
   },
 };
