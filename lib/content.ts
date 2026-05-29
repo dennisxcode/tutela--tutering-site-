@@ -115,17 +115,10 @@ export const content = {
       },
     },
     {
-      q: { zh: "授课是你亲自授课还是同学？", en: "Do you teach personally, or other students?" },
+      q: { zh: "课程由谁授课？", en: "Who teaches the classes?" },
       a: {
         zh: "授课由我们的导师团队负责，每位导师教自己的科目。",
         en: "Classes are taught by our tutor team — each tutor teaches their own subject.",
-      },
-    },
-    {
-      q: { zh: "你是哪个专业／几年级？", en: "What's your program / grade?" },
-      a: {
-        zh: "Collège Jean-de-Brébeuf 学生，拉丁语专业，Sec 4。",
-        en: "Collège Jean-de-Brébeuf student, Latin program, Sec 4.",
       },
     },
     {
