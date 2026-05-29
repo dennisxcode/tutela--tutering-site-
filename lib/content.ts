@@ -10,7 +10,7 @@ export const content = {
     brand: { zh: "入学考试辅导", en: "Admission Exam Tutoring" },
   },
   nav: {
-    join: { zh: "加入家长群", en: "Join the group" },
+    contact: { zh: "联系我", en: "Contact me" },
   },
   hero: {
     tag: { zh: "中学入学考试备考", en: "Secondary admission exam prep" },
@@ -19,7 +19,6 @@ export const content = {
       zh: "我们是刚刚考过入学考试的尖子生，帮助孩子顺利通过考试。",
       en: "We're top students who just passed the admission exams, here to help your child pass theirs.",
     },
-    cta: { zh: "扫码加入家长群", en: "Scan to join the parents' group" },
     chips: [
       { zh: "5–10 人小班", en: "Small classes of 5–10" },
       { zh: "数学 · 法语 · 英语", en: "Math · French · English" },
@@ -130,7 +129,7 @@ export const content = {
     },
   ] as { q: Bi; a: Bi }[],
   footer: {
-    cta: { zh: "扫码加入家长群", en: "Scan to join the parents' group" },
+    cta: { zh: "扫码联系我", en: "Scan to contact me" },
     wechatIdLabel: { zh: "微信号", en: "WeChat ID" },
     wechatId: { zh: "wxid_qs6tqmt94en122", en: "wxid_qs6tqmt94en122" },
     contactLabel: { zh: "联系人", en: "Contact" },
