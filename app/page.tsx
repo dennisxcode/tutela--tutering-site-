@@ -13,7 +13,6 @@ import { InfoSession } from "@/components/sections/InfoSession";
 import { Faq } from "@/components/sections/Faq";
 import { EnrolSteps } from "@/components/sections/EnrolSteps";
 import { FooterCta } from "@/components/sections/FooterCta";
-import { StickyCta } from "@/components/StickyCta";
 
 export default function Page() {
   return (
@@ -34,7 +33,6 @@ export default function Page() {
         <Faq />
         <FooterCta />
       </main>
-      <StickyCta />
     </LanguageProvider>
   );
 }

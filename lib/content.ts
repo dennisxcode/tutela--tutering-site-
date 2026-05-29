@@ -119,6 +119,10 @@ export const content = {
       zh: "说明会将于6月19日晚上7点至9点举行，欢迎所有家长参加。届时会介绍收费、课程安排、备考方式等详细信息，并设有问答环节。地点稍后确认；如有变动，我们会及时通知。",
       en: "Our information session is on June 19, 7:00–9:00 PM — all parents welcome. We'll cover pricing, the class schedule, and how we prepare the children, with a Q&A. Location to be confirmed; we'll notify you of any changes.",
     },
+    enrolNote: {
+      zh: "报名将于 6 月 26 日正式开始。",
+      en: "Enrollment opens June 26.",
+    },
   },
   enrol: {
     title: { zh: "报名流程", en: "How to enrol" },
@@ -157,6 +161,27 @@ export const content = {
       a: {
         zh: "上课地点正在确认中。我们计划安排线下教室，同时也提供线上课程，具体细节确认后通知。",
         en: "The location is being finalized. We plan to hold in-person classes and also offer online sessions; we'll share details once confirmed.",
+      },
+    },
+    {
+      q: { zh: "什么时候开课？", en: "When does tutoring run?" },
+      a: {
+        zh: "我们今年夏天开课，一直持续到九月新学年开始前。具体上课时间会在报名后同步。",
+        en: "Classes run through this summer, up until the new school year begins around September. Exact dates are shared after you enrol.",
+      },
+    },
+    {
+      q: { zh: "是线上还是线下上课？", en: "Are classes online or in person?" },
+      a: {
+        zh: "线上、线下我们都提供，根据学生的情况安排：线上报名人数足够就开线上班，线下人数足够就开线下班。",
+        en: "We offer both online and in-person, arranged around what students need — if enough students sign up online we run an online class, and likewise for in-person.",
+      },
+    },
+    {
+      q: { zh: "有一对一辅导吗？", en: "Do you offer one-on-one tutoring?" },
+      a: {
+        zh: "提供。一对一辅导请私信联系我们单独安排。",
+        en: "Yes. For one-on-one tutoring, please message us privately to arrange it.",
       },
     },
     {
