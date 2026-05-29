@@ -29,19 +29,25 @@ describe("content completeness", () => {
 
 describe("claim safety (spec §5)", () => {
   it("math tutor names AMC + Waterloo and makes no #1 superlative", () => {
-    const zh = content.tutors.math.zh;
-    expect(zh).toContain("AMC");
-    expect(zh).toContain("Waterloo");
-    expect(zh).not.toMatch(/第一|排名第一|#1/);
+    expect(content.tutors.math.zh).toContain("AMC");
+    expect(content.tutors.math.zh).toContain("Waterloo");
+    expect(content.tutors.math.zh).not.toMatch(/第一|排名第一|#1/);
+    expect(content.tutors.math.en).toContain("AMC");
+    expect(content.tutors.math.en).toContain("Waterloo");
     expect(content.tutors.math.en.toLowerCase()).not.toContain("#1");
   });
 
   it("location is framed as being finalized, not asserted at a school", () => {
+    const locationFaq = content.faq.find((f) => f.q.zh.includes("地点"));
+    expect(locationFaq).toBeDefined();
     expect(content.howItWorks.body.zh).toContain("确认中");
-    expect(content.faq[2].a.zh).toContain("确认中");
+    expect(content.howItWorks.body.en).toContain("being finalized");
+    expect(locationFaq!.a.zh).toContain("确认中");
+    expect(locationFaq!.a.en).toContain("being finalized");
   });
 
   it("mock exams are framed as upcoming, not live", () => {
     expect(content.whatWeOffer.mockExams.zh).toContain("即将");
+    expect(content.whatWeOffer.mockExams.en.toLowerCase()).toContain("coming soon");
   });
 });

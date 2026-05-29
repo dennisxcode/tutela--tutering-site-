@@ -72,7 +72,7 @@ export const content = {
       { label: { zh: "选 1 门", en: "1 subject" }, price: "$15" },
       { label: { zh: "选 2 门", en: "2 subjects" }, price: "$30" },
       { label: { zh: "选 3 门（套餐）", en: "3 subjects (bundle)" }, price: "$40" },
-    ],
+    ] as { label: Bi; price: string }[],
     note: {
       zh: "建议参加全部三门课，效果更全面，也更划算。",
       en: "We recommend all three subjects — more complete preparation, better value.",
@@ -139,6 +139,7 @@ export const content = {
   footer: {
     cta: { zh: "扫码加入家长群", en: "Scan to join the parents' group" },
     wechatIdLabel: { zh: "微信号", en: "WeChat ID" },
+    // Bilingual placeholder only; replace both with the same real WeChat ID before launch.
     wechatId: { zh: "（待提供）", en: "(to provide)" },
     note: { zh: "有问题欢迎私信。", en: "Message us with any questions." },
   },
