@@ -11,16 +11,16 @@ export function EnrolSteps() {
     <Section
       id="enrol"
       title={t(content.enrol.title)}
-      icon={<ListChecks size={22} />}
+      icon={<ListChecks size={20} />}
       surface
     >
       <ol className="space-y-4">
         {content.enrol.steps.map((step, i) => (
-          <li key={i} className="flex items-start gap-3">
-            <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-accent text-sm font-bold text-white">
+          <li key={i} className="flex items-start gap-4">
+            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent text-sm font-bold text-white shadow-sm">
               {i + 1}
             </span>
-            <span className="pt-0.5 text-base leading-relaxed text-body/90">{t(step)}</span>
+            <span className="pt-1 text-base leading-relaxed text-body/90">{t(step)}</span>
           </li>
         ))}
       </ol>

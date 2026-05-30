@@ -8,7 +8,7 @@ export function CtaButton({ className = "" }: { className?: string }) {
   return (
     <a
       href="#join"
-      className={`inline-block rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-white transition hover:opacity-90 ${className}`}
+      className={`inline-block rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:shadow-md hover:opacity-90 active:scale-[0.98] ${className}`}
     >
       {t(content.nav.contact)}
     </a>

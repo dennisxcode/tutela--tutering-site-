@@ -9,11 +9,13 @@ export function Tutors() {
   const { t } = useLanguage();
   const lines = [content.tutors.math, content.tutors.english, content.tutors.french];
   return (
-    <Section id="tutors" title={t(content.tutors.title)} icon={<Award size={22} />} surface>
+    <Section id="tutors" title={t(content.tutors.title)} icon={<Award size={20} />} surface>
       <ul className="space-y-3">
         {lines.map((line, i) => (
-          <li key={i} className="flex gap-2 text-base leading-relaxed text-body/90">
-            <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-accent" aria-hidden />
+          <li
+            key={i}
+            className="rounded-xl border-l-4 border-accent bg-ink/[0.03] px-5 py-4 text-base leading-relaxed text-body/90"
+          >
             {t(line)}
           </li>
         ))}
