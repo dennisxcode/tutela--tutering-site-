@@ -4,10 +4,10 @@ import { TopBar } from "@/components/TopBar";
 import { Hero } from "@/components/sections/Hero";
 import { CredibilityBar } from "@/components/sections/CredibilityBar";
 import { Subjects } from "@/components/sections/Subjects";
-import { KeyDates } from "@/components/sections/KeyDates";
 import { HowItWorks } from "@/components/sections/HowItWorks";
-import { Philosophy } from "@/components/sections/Philosophy";
+import { Manifesto } from "@/components/sections/Manifesto";
 import { Tutors } from "@/components/sections/Tutors";
+import { KeyDates } from "@/components/sections/KeyDates";
 import { Faq } from "@/components/sections/Faq";
 import { FinalCta } from "@/components/sections/FinalCta";
 
@@ -22,10 +22,10 @@ export default function Page() {
         <Hero />
         <CredibilityBar />
         <Subjects />
-        <KeyDates />
         <HowItWorks />
-        <Philosophy />
+        <Manifesto />
         <Tutors />
+        <KeyDates />
         <Faq />
         <FinalCta />
       </main>

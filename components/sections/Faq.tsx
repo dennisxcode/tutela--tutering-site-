@@ -4,7 +4,7 @@ import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
 import { content } from "@/lib/content";
-import { Section } from "@/components/Section";
+import { EditorialSection } from "@/components/EditorialSection";
 
 function FaqItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);
@@ -14,7 +14,7 @@ function FaqItem({ q, a }: { q: string; a: string }) {
         type="button"
         onClick={() => setOpen((o) => !o)}
         aria-expanded={open}
-        className="flex w-full items-center justify-between gap-3 py-4 text-left font-semibold text-ink"
+        className="flex w-full items-center justify-between gap-3 py-5 text-left font-semibold text-ink"
       >
         <span>{q}</span>
         <ChevronDown
@@ -29,7 +29,7 @@ function FaqItem({ q, a }: { q: string; a: string }) {
         }`}
       >
         <div className="min-h-0 overflow-hidden">
-          <p className="pb-4 text-base leading-relaxed text-body/80">{a}</p>
+          <p className="pb-5 text-base leading-relaxed text-body/80">{a}</p>
         </div>
       </div>
     </div>
@@ -40,12 +40,12 @@ export function Faq() {
   const { t, locale } = useLanguage();
   const title = locale === "zh" ? "常见问题" : "FAQ";
   return (
-    <Section id="faq" surface title={title}>
+    <EditorialSection id="faq" num="07" title={title}>
       <div className="border-t border-ink/10">
         {content.faq.map((item, i) => (
           <FaqItem key={i} q={t(item.q)} a={t(item.a)} />
         ))}
       </div>
-    </Section>
+    </EditorialSection>
   );
 }

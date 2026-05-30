@@ -2,8 +2,7 @@
 
 import { useLanguage } from "@/lib/LanguageContext";
 import { content, type Bi } from "@/lib/content";
-import { Section } from "@/components/Section";
-import { Reveal } from "@/components/Reveal";
+import { EditorialSection } from "@/components/EditorialSection";
 import { Logo } from "@/components/Logo";
 
 const tutors: { label: Bi; line: Bi }[] = [
@@ -15,24 +14,25 @@ const tutors: { label: Bi; line: Bi }[] = [
 export function Tutors() {
   const { t } = useLanguage();
   return (
-    <Section
+    <EditorialSection
       id="tutors"
+      num="05"
       title={t(content.tutors.title)}
       intro={t(content.subjects.special)}
     >
-      <div className="grid gap-4 sm:grid-cols-3">
+      <ul className="divide-y divide-ink/10 border-y border-ink/10">
         {tutors.map((tt, i) => (
-          <Reveal key={i} delay={i * 90}>
-            <div className="flex h-full flex-col gap-3 rounded-2xl border border-ink/10 bg-white p-5">
-              <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-ink">
-                <Logo className="h-6 w-6 text-cream" />
-              </span>
-              <h3 className="text-lg font-bold text-ink">{t(tt.label)}</h3>
-              <p className="text-sm leading-relaxed text-body/75">{t(tt.line)}</p>
+          <li key={i} className="flex items-start gap-4 py-6">
+            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-ink">
+              <Logo className="h-5 w-5 text-cream" />
+            </span>
+            <div>
+              <h3 className="font-serif text-lg font-semibold text-ink">{t(tt.label)}</h3>
+              <p className="mt-1 text-sm leading-relaxed text-body/75">{t(tt.line)}</p>
             </div>
-          </Reveal>
+          </li>
         ))}
-      </div>
-    </Section>
+      </ul>
+    </EditorialSection>
   );
 }

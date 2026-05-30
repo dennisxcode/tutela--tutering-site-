@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Noto_Sans_SC, Fraunces } from "next/font/google";
+import { Noto_Sans_SC, Noto_Serif_SC, Fraunces } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { content } from "@/lib/content";
@@ -11,6 +11,15 @@ const noto = Noto_Sans_SC({
   display: "swap",
   preload: false,
   variable: "--font-noto-sans-sc",
+});
+
+// Editorial Chinese serif for headlines — the "prospectus" gravitas.
+// Same CJK rules: no subset, preload false.
+const notoSerif = Noto_Serif_SC({
+  weight: ["500", "600", "700"],
+  display: "swap",
+  preload: false,
+  variable: "--font-noto-serif-sc",
 });
 
 // Display serif used only for the "Tutela" wordmark — gives the brand
@@ -53,7 +62,10 @@ const orgJsonLd = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="zh-CN" className={`${noto.variable} ${fraunces.variable} scroll-smooth`}>
+    <html
+      lang="zh-CN"
+      className={`${noto.variable} ${notoSerif.variable} ${fraunces.variable} scroll-smooth`}
+    >
       <body className="font-sans antialiased">
         {children}
         <Analytics />
