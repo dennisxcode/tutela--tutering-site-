@@ -30,12 +30,6 @@ export const content = {
       zh: "首次免费试听 · 满意再报名",
       en: "First lesson free — enrol only if you're happy",
     },
-    chips: [
-      { zh: "5–10 人小班", en: "Small classes of 5–10" },
-      { zh: "数学 · 法语 · 英语", en: "Math · French · English" },
-      { zh: "周六上午授课", en: "Saturday mornings" },
-      { zh: "24/7 在线答疑", en: "24/7 question support" },
-    ],
   },
   stats: [
     { value: { zh: "5–10", en: "5–10" }, label: { zh: "人 / 每班", en: "per class" } },
@@ -129,30 +123,56 @@ export const content = {
       en: "Enrollment opens June 26.",
     },
   },
-  credibility: {
-    title: { zh: "值得信任的背景", en: "Real, checkable credentials" },
+  advantages: {
+    title: { zh: "我们的优势", en: "Why choose Tutela" },
     intro: {
-      zh: "我们不靠口号，而是用真实、可查证的背景说话。",
-      en: "Not slogans — real backgrounds you can verify.",
+      zh: "我们把最关键的几件事做好，帮孩子稳稳通过中学入学考试。",
+      en: "We do the few things that matter most well — to get your child through the secondary admission exam.",
     },
     items: [
       {
-        zh: "导师就读于魁北克顶尖中学，包括 Collège Jean-de-Brébeuf。",
-        en: "Tutors attend top Quebec secondary schools, including Collège Jean-de-Brébeuf.",
+        title: { zh: "小班教学", en: "Small classes" },
+        body: {
+          zh: "每组 5–10 人，名额有限，每个孩子都能得到充分关注。",
+          en: "Groups of 5–10 with limited spots, so every child gets real attention.",
+        },
       },
       {
-        zh: "数学导师在 AMC（美国数学竞赛）、Waterloo（CEMC）竞赛中名列前茅。",
-        en: "Our math tutor places among the top in the AMC and Waterloo (CEMC) contests.",
+        title: { zh: "刚考过的尖子生授课", en: "Taught by students who just passed" },
+        body: {
+          zh: "导师来自魁北克顶尖中学（包括 Collège Jean-de-Brébeuf），刚刚考过同样的入学考试，最清楚考什么、怎么准备。",
+          en: "Our tutors attend top Quebec schools (incl. Collège Jean-de-Brébeuf) and just sat the same exams — they know exactly what's tested and how to prepare.",
+        },
       },
       {
-        zh: "我们刚刚考过同样的入学考试，备考记忆犹新。",
-        en: "We just sat the same admission exams ourselves — the prep is still fresh.",
+        title: { zh: "全科覆盖", en: "All three subjects" },
+        body: {
+          zh: "数学、法语、英语三门核心科目，按年级和报名人数分组。",
+          en: "Math, French, and English — the three core subjects, grouped by grade and enrolment.",
+        },
       },
       {
-        zh: "课后全天候答疑：孩子随时遇到不懂的问题，我们 24/7 在线解答。",
-        en: "Round-the-clock help: whenever your child gets stuck, we're online to answer — 24/7.",
+        title: { zh: "24/7 在线答疑", en: "24/7 question support" },
+        body: {
+          zh: "孩子随时遇到不懂的问题，我们全天候在线解答，不必等到下次上课。",
+          en: "Whenever your child gets stuck, we're online to answer — no need to wait for the next class.",
+        },
       },
-    ] as Bi[],
+      {
+        title: { zh: "灵活上课", en: "Flexible format" },
+        body: {
+          zh: "周六上午授课，线上线下结合，按孩子的情况安排。",
+          en: "Saturday mornings, in-person and online combined, arranged to suit your child.",
+        },
+      },
+      {
+        title: { zh: "免费试听", en: "Free trial" },
+        body: {
+          zh: "首次免费试听，满意再报名，零风险。",
+          en: "Your first lesson is free — enrol only if you're happy.",
+        },
+      },
+    ] as { title: Bi; body: Bi }[],
   },
   subjects: {
     title: { zh: "科目与年级", en: "Subjects & grades" },

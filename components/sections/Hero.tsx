@@ -39,29 +39,16 @@ export function Hero() {
           >
             {t(content.hero.subtitle)}
           </p>
-          <div
-            className="rise mt-9 flex flex-wrap items-center justify-center gap-3"
-            style={{ animationDelay: "750ms" }}
-          >
+          <div className="rise mt-9 flex justify-center" style={{ animationDelay: "750ms" }}>
             <CtaButton className="!px-6 !py-3 !text-base" />
-            <span className="inline-flex items-center gap-1.5 rounded-full border border-ink/15 bg-white px-3.5 py-2 text-sm font-medium text-ink">
-              <Gift size={15} className="text-accent" aria-hidden />
-              {t(content.hero.trial)}
-            </span>
           </div>
-          <ul
-            className="rise mt-9 flex flex-wrap justify-center gap-2.5"
-            style={{ animationDelay: "900ms" }}
+          <p
+            className="rise mt-5 flex items-center justify-center gap-1.5 text-sm text-body/60"
+            style={{ animationDelay: "850ms" }}
           >
-            {content.hero.chips.map((chip, i) => (
-              <li
-                key={i}
-                className="rounded-full border border-ink/15 bg-white/50 px-3.5 py-1.5 text-sm text-ink/80"
-              >
-                {t(chip)}
-              </li>
-            ))}
-          </ul>
+            <Gift size={14} className="text-accent" aria-hidden />
+            {t(content.hero.trial)}
+          </p>
         </div>
       </div>
     </section>

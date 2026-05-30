@@ -2,7 +2,7 @@ import { LanguageProvider } from "@/lib/LanguageContext";
 import { AnnouncementBar } from "@/components/AnnouncementBar";
 import { TopBar } from "@/components/TopBar";
 import { Hero } from "@/components/sections/Hero";
-import { CredibilityBar } from "@/components/sections/CredibilityBar";
+import { Advantages } from "@/components/sections/Advantages";
 import { Subjects } from "@/components/sections/Subjects";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { Manifesto } from "@/components/sections/Manifesto";
@@ -20,7 +20,7 @@ export default function Page() {
       </div>
       <main>
         <Hero />
-        <CredibilityBar />
+        <Advantages />
         <Subjects />
         <HowItWorks />
         <Manifesto />
