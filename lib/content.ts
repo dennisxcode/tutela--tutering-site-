@@ -34,6 +34,7 @@ export const content = {
       { zh: "5–10 人小班", en: "Small classes of 5–10" },
       { zh: "数学 · 法语 · 英语", en: "Math · French · English" },
       { zh: "周六上午授课", en: "Saturday mornings" },
+      { zh: "24/7 在线答疑", en: "24/7 question support" },
     ],
   },
   stats: [
@@ -146,6 +147,10 @@ export const content = {
       {
         zh: "我们刚刚考过同样的入学考试，备考记忆犹新。",
         en: "We just sat the same admission exams ourselves — the prep is still fresh.",
+      },
+      {
+        zh: "课后全天候答疑：孩子随时遇到不懂的问题，我们 24/7 在线解答。",
+        en: "Round-the-clock help: whenever your child gets stuck, we're online to answer — 24/7.",
       },
     ] as Bi[],
   },
@@ -296,6 +301,13 @@ export const content = {
       a: {
         zh: "提供。一对一辅导请私信联系我们单独安排。",
         en: "Yes. For one-on-one tutoring, please message us privately to arrange it.",
+      },
+    },
+    {
+      q: { zh: "孩子课后有问题，找谁问？", en: "Where can my child ask questions after class?" },
+      a: {
+        zh: "我们提供 24/7 在线答疑，孩子随时遇到不懂的问题，都可以联系我们，不必等到下次上课。",
+        en: "We offer 24/7 question support — whenever your child gets stuck, they can reach us, no need to wait for the next class.",
       },
     },
     {
