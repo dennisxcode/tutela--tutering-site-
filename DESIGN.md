@@ -1,145 +1,127 @@
-# Design System: Tutela
+# Tutela — Design System & Brief
 
-> Source of truth for generating new Tutela screens (Stitch or hand-built) that stay
-> on-brand. Encodes the **original** production design — warm, restrained, editorial —
-> not the rejected "taste-pass" experiment.
->
-> **Adaptation note:** This skill defaults to cool Zinc/Slate neutrals and high motion.
-> Tutela deliberately diverges: a **warm** cream/deep-green palette and **restrained**
-> motion. This is an intentional brand decision (trust for Chinese-speaking parents),
-> not an oversight. The single-accent, no-neon, no-Inter, distinctive-serif, and
-> no-fabricated-data rules are all honored.
+> **Hand this file to an AI (or a designer) before any visual work on Tutela.**
+> It defines the brand, the look, the rules, and the things to never do. Paste it
+> in full, then describe the specific screen/section you want.
 
-## 1. Visual Theme & Atmosphere
+---
 
-A warm, gallery-airy admissions-tutoring site that reads like a well-edited printed
-prospectus, not a SaaS landing page. The mood is **calm, trustworthy, and classical** —
-a nod to the Quebec grammar-school tradition (the brand mark is a pointed arch). Density
-is low (airy, generous whitespace, one idea per section). Variance is modest and
-**left-aligned**, never centered-hero or chaotic. Motion is **restrained** — small,
-meaningful state transitions only, nothing cinematic. The chrome should disappear so
-warmth, type, and the arch do the talking.
+## 0. The one-line brief
+Tutela is admission-exam tutoring for Quebec secondary schools, run by students
+who *just passed those exams*. The site should feel like a **prestigious printed
+prospectus crossed with an architect's drawing** — warm, calm, editorial,
+trustworthy. Premium through **typography, whitespace, and restraint**, not
+through effects.
 
-- **Density:** Art-Gallery Airy (≈3)
-- **Variance:** Left-aligned, gently offset (≈3) — not centered, not chaotic
-- **Motion:** Static-Restrained (≈2–3)
+## 1. The core idea — "Le Passage"
+The brand symbol is a **pointed arch = the threshold a child passes through into
+secondary school.** Lean into it: the arch frames the hero, draws itself like a
+blueprint, and recurs as a quiet motif. Every design decision should feel
+*intentional and architectural*, never decorative or random.
 
-## 2. Color Palette & Roles
+## 2. Audience & language
+- Chinese-speaking **parents** of primary grades 3–5 in **Montreal / Quebec**.
+- **Simplified Chinese is the primary language** (default); English is a courtesy
+  via a 中文 / EN toggle. Write Chinese that sounds native, warm, and clear — not
+  translated. Every string is a `{ zh, en }` pair in `lib/content.ts`.
 
-A single warm family — no cool/warm gray fluctuation, no second accent.
+## 3. Logo & brand marks
+- **Logo:** a single, unbroken **pointed-arch stroke** — nothing inside it, no
+  dot, no keystone. Path (32×32 viewBox): `M7 26 Q7 10 16 5 Q25 10 25 26`,
+  ~2.2 stroke, round caps, deep-green (`currentColor`). See `components/Logo.tsx`.
+- **Wordmark:** "Tutela" in **Fraunces italic 600** (Latin display serif). The
+  arch + wordmark sit together in the top bar and footer.
+- **Favicon / app icon:** the arch in cream on a deep-green rounded tile
+  (`app/icon.svg`).
+- **Hero motif:** a large version of the arch that *draws itself on load* and
+  frames the headline (`components/ArchDraw.tsx`).
+- Never add extra elements to the mark to "make it mean more." The arch alone is
+  the meaning. Keep it clean.
 
-- **Cream Canvas** (`#faf7f2`) — Primary background surface (the "paper")
-- **Pure Surface** (`#ffffff`) — Alternating section fill, chips, bordered cards
-- **Deep Green Ink** (`#1f4733`) — Primary text, headings, the logo, and the dark
-  footer. Functions as the near-black; **never use pure `#000000`.**
-- **Warm Charcoal** (`#2b2b28`) — Body copy (often at 80–90% opacity for calm contrast)
-- **Hairline Border** (`rgba(31,71,51,0.10–0.20)`) — 1px structural lines, chip and
-  card outlines (deep-green ink at low alpha — borders share the ink hue, never gray)
-- **Terracotta Accent** (`#c0532b`) — The **only** accent. Reserved for the primary CTA
-  and active/focus states. Saturation is muted, not neon. Do not spread it across dots,
-  rules, and labels — when everything is accent, nothing is.
+## 4. Colour (warm, one accent)
+- **Cream `#faf7f2`** — primary background (the paper).
+- **Deep Green Ink `#1f4733`** — text, headings, the logo, dark sections. This is
+  the near-black; **never use `#000000`.**
+- **Warm Charcoal `#2b2b28`** — body copy (often at 70–90% opacity).
+- **Terracotta `#c0532b`** — the **only** accent. Reserved for the primary CTA,
+  section numbers, and active/focus states. Muted, never neon. Do not spread it
+  across dots, bullets, and rules — when accent is everywhere it means nothing.
+- Borders/hairlines: deep-green ink at low alpha (`ink/10`–`ink/20`), never grey.
 
-Banned: purple/blue "AI" neon, glow shadows, gradients on headlines, cool grays,
-any second accent.
+## 5. Typography (the biggest lever)
+- **Headlines → `Noto Serif SC`** (Chinese serif, weight 500–700). This is what
+  makes the site feel prestigious and literary. Use it for hero + every section
+  title + key numbers/prices/dates.
+- **Body → `Noto Sans SC`** (400/500/700). Readable, calm, ~comfortable measure
+  inside a 42rem column.
+- **Wordmark & section numbers (01, 02…) → `Fraunces` italic** (Latin only).
+- **Hierarchy comes from weight, serif/sans contrast, and colour — not giant
+  sizes.** Hero headline ~clamp(2.6rem, 7.5vw, 4.25rem); section titles ~2.5rem.
+- **Banned fonts:** `Inter`; generic serifs (`Times New Roman`, `Georgia`,
+  `Garamond`). Don't set Chinese text in Fraunces (Latin-only — keep it to
+  "Tutela" and numerals).
 
-## 3. Typography Rules
+## 6. Layout & structure
+- One **42rem editorial column** (`max-w-content`), generous side padding,
+  big vertical rhythm (`py-20`→`py-28`). One idea per section.
+- **Numbered editorial sections (01–0N):** a Fraunces number + serif title + a
+  hairline rule that *draws across* on entry. See `components/EditorialSection.tsx`.
+- **Alternate surfaces** cream ↔ white between sections; one **full-bleed
+  deep-green "manifesto"** section for the philosophy (the bold colour moment).
+- **De-box everything.** Stats are big serif numbers on hairline dividers;
+  subjects / pricing / dates / tutors are clean editorial lists with `divide-y`
+  hairlines — *not* a grid of bordered cards.
+- Hero uses a faint **blueprint grid** (`.blueprint`) + corner **registration
+  ticks** for the architect's-drawing feel.
+- Mobile-first: single column < 768px, no horizontal scroll, touch targets ≥44px.
 
-- **Wordmark / Display Serif:** `Fraunces` *italic, 600* — used **only** for the
-  "Tutela" wordmark (top bar, footer, share card). A distinctive modern serif, allowed
-  precisely because it has character; it carries the classical/analog brand voice.
-- **Everything else:** `Noto Sans SC` (weights 400 / 500 / 700) — required because the
-  primary audience reads Simplified Chinese, and it renders Latin cleanly too. Track
-  headings slightly tight; hierarchy comes from **weight and color**, not giant sizes.
-- **Body:** relaxed leading, comfortable measure inside a 42rem column; secondary text
-  in Warm Charcoal at ~80% opacity.
-- **Banned:** `Inter`; generic serifs (`Times New Roman`, `Georgia`, `Garamond`,
-  `Palatino`); using Fraunces for body or for Chinese text (it only styles Latin —
-  Chinese falls back to Noto, so keep Fraunces to short Latin brand moments).
+## 7. Motion (restrained & meaningful — this matters most)
+The signature is **the arch drawing itself** on load (one stroke), then the hero
+text rising. Section headers reveal by **drawing their hairline rule**. The FAQ
+**eases open**. That's it.
+- **Banned:** generic "everything fades up on scroll" stagger stacks — that is the
+  #1 AI-slop tell and must not be used. No bouncy springs, no parallax overload.
+- Animate only `transform` / `opacity` (GPU). Always honour
+  `prefers-reduced-motion` (show content immediately, no animation).
 
-## 4. The Hero
+## 8. Components
+- **CTA:** one repeated action — `联系我 / Contact me` — terracotta fill, rounded,
+  flat (no glow). It appears in the nav, hero, and final section. It is the *only*
+  terracotta button.
+- **Chips:** outlined pills for quick facts (class size, subjects, 24/7 support).
+- **FAQ:** accordion, chevron rotates, body height animates.
+- **Contact:** WeChat QR (no backend) + a long-press/scan hint for mobile, since a
+  parent on their phone can't scan their own screen.
+- **Announcement ribbon:** slim deep-green bar pinned at top for time-sensitive
+  dates.
 
-Left-aligned, single column, **never centered**. Order: small uppercase eyebrow
-(`蒙特利尔 · …`, tracking-widest) → bold headline (Noto Sans SC, ~`2.25rem`/36px,
-tight leading) → one-sentence subtitle → **one** primary CTA (`联系我`, terracotta)
-sitting beside a neutral free-trial pill → a row of outlined fact-chips.
+## 9. Voice & content rules
+- Speak as **"we"** everywhere. The founder, **Dennis**, appears **only** in the
+  contact area; the CTA is the single personal touchpoint.
+- We promise **24/7 question support** for kids — surface it (hero chip +
+  credibility + FAQ).
+- Trust comes from **specificity + honesty**, not hype: name real schools
+  (Collège Jean-de-Brébeuf) and contests (AMC, Waterloo/CEMC), the exact schedule,
+  the free trial (免费试听), and limited spots (名额有限).
 
-- **Brand motif, not stock photo:** a large, low-opacity **arch** (the logo shape) bleeds
-  off the right edge on `md+` as an embossed compositional element. No photography of
-  real people (deliberate — we never misrepresent who teaches).
-- **CTA restraint:** exactly one primary CTA. The trial pill is informational (neutral
-  outline), not a competing button.
-- **No filler:** no "scroll to explore," scroll arrows, or bouncing chevrons.
+## 10. Claim-safety (never break — enforced by tests)
+- Math tutor: name **AMC** + **Waterloo (CEMC)** only; **no "#1" / 第一** superlatives.
+- Location: keep **"确认中" / "being finalized"** — never claim a named school or imply
+  institutional affiliation.
+- Mock exams: **"即将推出" / "coming soon"** — not presented as finished.
+- **Never fabricate** student results, enrolment numbers, testimonials, or **photos
+  of real people.** No stock "tutor" faces. If there's no track record yet, lean on
+  the tutors' own verifiable credentials.
 
-## 5. Component Stylings
+## 11. Anti-patterns (the AI-slop checklist — avoid all)
+- Generic fade-up scroll reveals · card-soup (3 equal bordered cards) ·
+  random decorative shapes/blobs · `Inter` · pure black · neon/glow shadows ·
+  gradient headlines · a second accent colour · emojis · fabricated stats/metrics ·
+  fake testimonials · stock people photos · "Elevate / Seamless / Next-Gen" copy ·
+  "Scroll to explore" / bouncing chevrons · generic placeholder names.
 
-- **Buttons (CTA):** terracotta fill, white label, `rounded-lg`, semibold. Flat — **no
-  outer glow**. Hover = gentle opacity shift; active = subtle tactile press. This is the
-  only terracotta element on screen.
-- **Chips / fact-pills:** white fill, hairline deep-green border, fully rounded. Quiet,
-  ticket-like. Used for scannable facts (class size, subjects, schedule).
-- **Cards / containers:** use sparingly and only when elevation earns it. Prefer hairline
-  borders and whitespace over boxes. The dark footer panel is the one strong surface.
-- **Lists (pricing, tutors, steps):** hairline-divided rows or simple bullets. Numbered
-  steps use a deep-green (not terracotta) numeral badge.
-- **FAQ accordion:** question is a full-width button with a chevron that rotates on open.
-  Keep state changes legible.
-- **Language toggle:** a two-option pill (`中文 / EN`) with the active side filled deep
-  green; persists choice to `localStorage`, Chinese default.
-- **WeChat contact card:** real QR on the dark footer with a long-press/scan hint (mobile
-  users can't scan their own screen — always include the instruction).
-- **Loading/empty/error:** skeletal placeholders matching layout; inline, plainly-worded
-  errors. No circular spinners.
-
-## 6. Layout Principles
-
-- **42rem (`max-w-content`) centered measure** for all reading content — an editorial
-  column, generous side padding, one idea per section.
-- **Alternating surfaces** (cream ↔ white) to separate sections instead of heavy borders.
-- Left-aligned section headings; hierarchy via weight/space, minimal decorative rules.
-- No overlapping elements — every element owns its spatial zone (the hero arch is a
-  low-opacity background motif, not stacked on text).
-- CSS Grid for structure; avoid `calc()` percentage hacks.
-- Full-height regions use `min-h-[100dvh]`, never `h-screen`.
-- **Known tension:** the stats row is a 3-up equal layout (a pattern this skill normally
-  discourages). It's acceptable here because it's three *data points*, not three feature
-  cards — but if it ever grows, switch to hairline-divided figures rather than boxes.
-
-## 7. Responsive Rules
-
-- **Mobile-first.** The site is designed phone-first; everything collapses to one column
-  below `768px`. No horizontal scroll, ever.
-- Headlines scale modestly; body never below `1rem`. Comfortable line length on all sizes.
-- Touch targets ≥ `44px` (CTA, toggle, accordion rows, QR).
-- The desktop hero arch motif hides on small screens; content reflows to a clean stack.
-- Section vertical rhythm tightens proportionally on mobile.
-
-## 8. Motion & Interaction
-
-Restrained and **meaningful** — motion communicates state, it does not decorate.
-
-- Chevron rotation on FAQ open; gentle opacity/press feedback on the CTA.
-- If reveal-on-scroll or animated accordions are ever added, keep them subtle (short,
-  eased) and **respect `prefers-reduced-motion`** (show content immediately).
-- Animate only `transform` and `opacity` (hardware-accelerated). Never animate
-  `top/left/width/height`.
-- No perpetual loops, no spring-bouncy cinematics — this audience wants clarity and calm,
-  not choreography.
-
-## 9. Anti-Patterns (Banned)
-
-- No emojis anywhere.
-- No `Inter`; no generic serifs (Fraunces is the only serif, for the wordmark only).
-- No pure black `#000000` — Deep Green Ink is the near-black.
-- No neon / outer-glow shadows; no gradient headlines; no oversaturated color.
-- No second accent — terracotta is for the CTA and active states only.
-- No stock photos of "tutors" or any misrepresentation of who teaches.
-- **No fabricated data** — never invent enrolment counts, success rates, "98% pass," or
-  testimonials. If there's no track record yet, lean on the tutors' own verifiable
-  credentials (named contests only, e.g. AMC / Waterloo — no "#1" superlatives).
-- No unconfirmed claims stated as fact — the class location stays "确认中 / being
-  finalized" until confirmed; mock exams stay "即将推出 / coming soon."
-- No `LABEL // YEAR` typography, no AI clichés ("Elevate", "Seamless", "Next-Gen").
-- No filler UI text ("Scroll to explore", bouncing chevrons).
-- No generic placeholder names; the one real personal touchpoint is **Dennis**, in the
-  contact area only — everywhere else the voice is collective "we".
-- No broken image links.
+## 12. Stack (for implementers)
+Next.js 14 (App Router) · TypeScript · Tailwind (tokens above) · Lucide (sparingly)
+· fonts via `next/font` · Vitest. All copy in `lib/content.ts` as `{zh,en}`;
+locale state in `lib/LanguageContext.tsx` (zh default, localStorage). No backend.
+Deploy: Vercel (`webtutela.vercel.app`). Commits attributed to Dennis only.
