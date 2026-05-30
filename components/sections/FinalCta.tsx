@@ -5,12 +5,15 @@ import { content } from "@/lib/content";
 import { WeChatCta } from "@/components/WeChatCta";
 import { Logo } from "@/components/Logo";
 import { Arch } from "@/components/Arch";
+import { ArchTop } from "@/components/ArchTop";
 
 export function FinalCta() {
   const { t } = useLanguage();
   return (
     <footer id="join" className="grain relative overflow-hidden bg-ink text-white">
-      <div className="relative z-10 mx-auto max-w-content px-5 py-24 text-center sm:py-32">
+      {/* the closing section rises as an arched doorway (cap = preceding cream section) */}
+      <ArchTop color="#faf7f2" />
+      <div className="relative z-10 mx-auto max-w-content px-5 pb-24 pt-28 text-center sm:pb-32 sm:pt-44">
         <Arch strokeWidth={2.5} className="mx-auto mb-8 h-16 w-auto text-white/40" />
         <h2 className="font-serif text-3xl font-semibold leading-tight tracking-tight sm:text-[2.5rem]">
           {t(content.finalCta.heading)}
