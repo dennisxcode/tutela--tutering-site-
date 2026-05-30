@@ -1,37 +1,33 @@
 import { LanguageProvider } from "@/lib/LanguageContext";
+import { AnnouncementBar } from "@/components/AnnouncementBar";
 import { TopBar } from "@/components/TopBar";
 import { Hero } from "@/components/sections/Hero";
-import { WhoWeAre } from "@/components/sections/WhoWeAre";
-import { WhyUs } from "@/components/sections/WhyUs";
-import { WhatWeOffer } from "@/components/sections/WhatWeOffer";
-import { Tutors } from "@/components/sections/Tutors";
+import { CredibilityBar } from "@/components/sections/CredibilityBar";
+import { Subjects } from "@/components/sections/Subjects";
 import { HowItWorks } from "@/components/sections/HowItWorks";
-import { Pricing } from "@/components/sections/Pricing";
-import { MidCta } from "@/components/MidCta";
-import { WhoItsFor } from "@/components/sections/WhoItsFor";
-import { InfoSession } from "@/components/sections/InfoSession";
+import { Manifesto } from "@/components/sections/Manifesto";
+import { Tutors } from "@/components/sections/Tutors";
+import { KeyDates } from "@/components/sections/KeyDates";
 import { Faq } from "@/components/sections/Faq";
-import { EnrolSteps } from "@/components/sections/EnrolSteps";
-import { FooterCta } from "@/components/sections/FooterCta";
+import { FinalCta } from "@/components/sections/FinalCta";
 
 export default function Page() {
   return (
     <LanguageProvider>
-      <TopBar />
+      <div className="sticky top-0 z-50">
+        <AnnouncementBar />
+        <TopBar />
+      </div>
       <main>
         <Hero />
-        <WhoWeAre />
-        <WhyUs />
-        <WhatWeOffer />
-        <Tutors />
+        <CredibilityBar />
+        <Subjects />
         <HowItWorks />
-        <Pricing />
-        <MidCta />
-        <WhoItsFor />
-        <InfoSession />
-        <EnrolSteps />
+        <Manifesto />
+        <Tutors />
+        <KeyDates />
         <Faq />
-        <FooterCta />
+        <FinalCta />
       </main>
     </LanguageProvider>
   );

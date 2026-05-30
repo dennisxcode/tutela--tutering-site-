@@ -15,6 +15,10 @@ export const content = {
   nav: {
     contact: { zh: "联系我", en: "Contact me" },
   },
+  announcement: {
+    zh: "6 月 19 日 家长说明会 · 6 月 26 日 开放报名",
+    en: "June 19 parent info session · Enrollment opens June 26",
+  },
   hero: {
     tag: { zh: "蒙特利尔 · 中学入学考试备考", en: "Montreal · Secondary admission exam prep" },
     title: { zh: "中学入学考试辅导", en: "Secondary Admission Exam Tutoring" },
@@ -30,6 +34,7 @@ export const content = {
       { zh: "5–10 人小班", en: "Small classes of 5–10" },
       { zh: "数学 · 法语 · 英语", en: "Math · French · English" },
       { zh: "周六上午授课", en: "Saturday mornings" },
+      { zh: "24/7 在线答疑", en: "24/7 question support" },
     ],
   },
   stats: [
@@ -124,6 +129,120 @@ export const content = {
       en: "Enrollment opens June 26.",
     },
   },
+  credibility: {
+    title: { zh: "值得信任的背景", en: "Real, checkable credentials" },
+    intro: {
+      zh: "我们不靠口号，而是用真实、可查证的背景说话。",
+      en: "Not slogans — real backgrounds you can verify.",
+    },
+    items: [
+      {
+        zh: "导师就读于魁北克顶尖中学，包括 Collège Jean-de-Brébeuf。",
+        en: "Tutors attend top Quebec secondary schools, including Collège Jean-de-Brébeuf.",
+      },
+      {
+        zh: "数学导师在 AMC（美国数学竞赛）、Waterloo（CEMC）竞赛中名列前茅。",
+        en: "Our math tutor places among the top in the AMC and Waterloo (CEMC) contests.",
+      },
+      {
+        zh: "我们刚刚考过同样的入学考试，备考记忆犹新。",
+        en: "We just sat the same admission exams ourselves — the prep is still fresh.",
+      },
+      {
+        zh: "课后全天候答疑：孩子随时遇到不懂的问题，我们 24/7 在线解答。",
+        en: "Round-the-clock help: whenever your child gets stuck, we're online to answer — 24/7.",
+      },
+    ] as Bi[],
+  },
+  subjects: {
+    title: { zh: "科目与年级", en: "Subjects & grades" },
+    intro: {
+      zh: "针对中学入学考试的三门核心科目，按年级和报名人数分组。",
+      en: "The three core subjects for the secondary admission exam, grouped by grade and enrolment.",
+    },
+    list: [
+      {
+        name: { zh: "数学", en: "Math" },
+        blurb: {
+          zh: "入学考试的核心，重点突破题型与解题速度。",
+          en: "The core of the exam — focused on question types and solving speed.",
+        },
+      },
+      {
+        name: { zh: "法语", en: "French" },
+        blurb: {
+          zh: "阅读、写作与语法，贴近考试要求。",
+          en: "Reading, writing, and grammar, aligned to the exam.",
+        },
+      },
+      {
+        name: { zh: "英语", en: "English" },
+        blurb: {
+          zh: "理解与表达并重，打好语言基础。",
+          en: "Comprehension and expression, building a solid base.",
+        },
+      },
+    ] as { name: Bi; blurb: Bi }[],
+    grades: {
+      zh: "适合小学三、四、五年级。除入学考试备考外，我们也提供一般学科辅导。",
+      en: "For primary grades 3, 4, and 5. Beyond admission prep, we also offer general academic tutoring.",
+    },
+    special: {
+      zh: "有特殊情况（例如 Sec 1 想转入 Sec 2）或想了解一对一辅导，欢迎私信联系我们。",
+      en: "For special cases (e.g. a Sec 1 student moving into Sec 2) or one-on-one tutoring, message us privately.",
+    },
+  },
+  philosophy: {
+    title: { zh: "为什么学生会进步", en: "Why students improve" },
+    intro: {
+      zh: "我们的方法很简单：用刚刚走过这条路的人，带还在路上的孩子。",
+      en: "Our approach is simple — students who just walked the path guide the ones still on it.",
+    },
+    principles: [
+      {
+        title: { zh: "真正懂这场考试", en: "We actually know this exam" },
+        body: {
+          zh: "我们刚刚考过同样的入学考试，最清楚考什么、该怎么准备，帮孩子少走弯路。",
+          en: "We just sat the same admission exams, so we know exactly what they test and how to prepare — fewer detours for your child.",
+        },
+      },
+      {
+        title: { zh: "小班，真关注", en: "Small groups, real attention" },
+        body: {
+          zh: "每组 5–10 人，名额有限，老师能照顾到每个孩子的薄弱点。",
+          en: "Groups of 5–10 with limited spots, so each tutor can address every child's weak spots.",
+        },
+      },
+      {
+        title: { zh: "按真实题型练习", en: "Practice on the real format" },
+        body: {
+          zh: "我们将提供基于近年入学考试内容设计的模拟测试，让孩子提前熟悉考试形式。（即将推出）",
+          en: "We'll provide practice exams modeled on recent admission-exam content, so children get familiar with the format ahead of time. (Coming soon)",
+        },
+      },
+    ] as { title: Bi; body: Bi }[],
+  },
+  dates: {
+    title: { zh: "重要日期", en: "Key dates" },
+    items: [
+      {
+        date: { zh: "6 月 19 日", en: "June 19" },
+        label: { zh: "家长说明会 · 晚 7–9 点", en: "Parent info session · 7–9 PM" },
+        note: {
+          zh: "介绍收费、课程安排与备考方式，并设有问答环节。地点稍后确认。",
+          en: "Covers pricing, schedule, and how we prepare students, with a Q&A. Location to be confirmed.",
+        },
+      },
+      {
+        date: { zh: "6 月 26 日", en: "June 26" },
+        label: { zh: "开放报名", en: "Enrollment opens" },
+        note: {
+          zh: "正式开始报名，名额有限，报满即止。",
+          en: "Registration opens — limited spots, first come first served.",
+        },
+      },
+    ] as { date: Bi; label: Bi; note: Bi }[],
+  },
   enrol: {
     title: { zh: "报名流程", en: "How to enrol" },
     steps: [
@@ -185,6 +304,13 @@ export const content = {
       },
     },
     {
+      q: { zh: "孩子课后有问题，找谁问？", en: "Where can my child ask questions after class?" },
+      a: {
+        zh: "我们提供 24/7 在线答疑，孩子随时遇到不懂的问题，都可以联系我们，不必等到下次上课。",
+        en: "We offer 24/7 question support — whenever your child gets stuck, they can reach us, no need to wait for the next class.",
+      },
+    },
+    {
       q: { zh: "课程由谁授课？", en: "Who teaches the classes?" },
       a: {
         zh: "授课由我们的导师团队负责，每位导师教自己的科目。",
@@ -199,6 +325,13 @@ export const content = {
       },
     },
   ] as { q: Bi; a: Bi }[],
+  finalCta: {
+    heading: { zh: "准备好帮孩子开始了吗？", en: "Ready to help your child get started?" },
+    subtitle: {
+      zh: "扫码联系我们，先免费试听，满意再报名。",
+      en: "Message us on WeChat — start with a free trial, enrol only if you're happy.",
+    },
+  },
   footer: {
     cta: { zh: "扫码联系我", en: "Scan to contact me" },
     scanHint: {
