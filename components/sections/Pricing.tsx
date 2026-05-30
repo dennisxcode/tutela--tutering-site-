@@ -15,10 +15,10 @@ export function Pricing() {
           return (
             <li
               key={i}
-              className={`flex items-center justify-between px-4 py-3 ${isBundle ? "bg-accent/5" : ""}`}
+              className={`flex items-center justify-between px-4 py-3 ${isBundle ? "bg-ink/[0.04]" : ""}`}
             >
               <span className="text-body/90">{t(row.label)}</span>
-              <span className={`font-bold ${isBundle ? "text-accent" : "text-ink"}`}>{row.price}</span>
+              <span className="font-bold text-ink">{row.price}</span>
             </li>
           );
         })}

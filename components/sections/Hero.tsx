@@ -13,7 +13,7 @@ export function Hero() {
         viewBox="0 0 32 32"
         fill="none"
         aria-hidden
-        className="pointer-events-none absolute -right-12 top-1/2 hidden h-80 w-80 -translate-y-1/2 text-ink/[0.05] md:block lg:right-[6%]"
+        className="pointer-events-none absolute -right-24 top-1/2 hidden h-[30rem] w-[30rem] -translate-y-1/2 text-ink/[0.07] md:block"
       >
         <path d="M8 25 Q8 11 16 6" stroke="currentColor" strokeWidth={2} strokeLinecap="round" />
         <path d="M24 25 Q24 11 16 6" stroke="currentColor" strokeWidth={2} strokeLinecap="round" />
@@ -30,8 +30,8 @@ export function Hero() {
       </p>
       <div className="flex flex-wrap items-center gap-3">
         <CtaButton className="!px-6 !py-3 !text-base" />
-        <span className="inline-flex items-center gap-1.5 rounded-full bg-accent/10 px-3 py-1.5 text-sm font-medium text-accent">
-          <Gift size={15} aria-hidden />
+        <span className="inline-flex items-center gap-1.5 rounded-full border border-ink/20 bg-white px-3 py-1.5 text-sm font-medium text-ink">
+          <Gift size={15} className="text-ink/60" aria-hidden />
           {t(content.hero.trial)}
         </span>
       </div>

@@ -23,9 +23,15 @@ function FaqItem({ q, a }: { q: string; a: string }) {
           aria-hidden
         />
       </button>
-      {open && (
-        <p className="pb-4 text-base leading-relaxed text-body/80">{a}</p>
-      )}
+      <div
+        className={`grid transition-all duration-300 ease-out ${
+          open ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+        }`}
+      >
+        <div className="min-h-0 overflow-hidden">
+          <p className="pb-4 text-base leading-relaxed text-body/80">{a}</p>
+        </div>
+      </div>
     </div>
   );
 }

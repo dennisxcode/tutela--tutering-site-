@@ -17,7 +17,7 @@ export function EnrolSteps() {
       <ol className="space-y-4">
         {content.enrol.steps.map((step, i) => (
           <li key={i} className="flex items-start gap-3">
-            <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-accent text-sm font-bold text-white">
+            <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-ink text-sm font-bold text-white">
               {i + 1}
             </span>
             <span className="pt-0.5 text-base leading-relaxed text-body/90">{t(step)}</span>

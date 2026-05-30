@@ -13,7 +13,7 @@ export function Tutors() {
       <ul className="space-y-3">
         {lines.map((line, i) => (
           <li key={i} className="flex gap-2 text-base leading-relaxed text-body/90">
-            <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-accent" aria-hidden />
+            <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-ink/40" aria-hidden />
             {t(line)}
           </li>
         ))}
