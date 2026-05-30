@@ -9,7 +9,7 @@ import { Logo } from "@/components/Logo";
 export function TopBar() {
   const { t } = useLanguage();
   return (
-    <header className="sticky top-0 z-50 border-b border-ink/10 bg-cream/90 backdrop-blur">
+    <header className="border-b border-ink/10 bg-cream/90 backdrop-blur">
       <div className="mx-auto flex max-w-content items-center justify-between px-5 py-3">
         <span className="flex items-center gap-2 text-ink">
           <Logo className="h-7 w-7" />

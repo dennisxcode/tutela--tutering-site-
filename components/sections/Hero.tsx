@@ -4,47 +4,55 @@ import { Gift } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
 import { content } from "@/lib/content";
 import { CtaButton } from "@/components/CtaButton";
+import { ParallaxArch } from "@/components/ParallaxArch";
 
 export function Hero() {
   const { t } = useLanguage();
   return (
-    <section className="relative overflow-hidden">
-      <svg
-        viewBox="0 0 32 32"
-        fill="none"
-        aria-hidden
-        className="pointer-events-none absolute -right-12 top-1/2 hidden h-80 w-80 -translate-y-1/2 text-ink/[0.05] md:block lg:right-[6%]"
-      >
-        <path d="M8 25 Q8 11 16 6" stroke="currentColor" strokeWidth={2} strokeLinecap="round" />
-        <path d="M24 25 Q24 11 16 6" stroke="currentColor" strokeWidth={2} strokeLinecap="round" />
-      </svg>
-      <div className="relative mx-auto max-w-content px-5 pb-12 pt-14">
-      <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-ink">
-        {t(content.hero.tag)}
-      </p>
-      <h1 className="mb-4 text-4xl font-bold leading-tight text-ink">
-        {t(content.hero.title)}
-      </h1>
-      <p className="mb-7 text-lg leading-relaxed text-body/90">
-        {t(content.hero.subtitle)}
-      </p>
-      <div className="flex flex-wrap items-center gap-3">
-        <CtaButton className="!px-6 !py-3 !text-base" />
-        <span className="inline-flex items-center gap-1.5 rounded-full bg-accent/10 px-3 py-1.5 text-sm font-medium text-accent">
-          <Gift size={15} aria-hidden />
-          {t(content.hero.trial)}
-        </span>
-      </div>
-      <ul className="mt-8 flex flex-wrap gap-2">
-        {content.hero.chips.map((chip, i) => (
-          <li
-            key={i}
-            className="rounded-full border border-ink/20 bg-white px-3 py-1 text-sm text-ink"
-          >
-            {t(chip)}
-          </li>
-        ))}
-      </ul>
+    <section className="relative overflow-hidden bg-cream">
+      <ParallaxArch className="pointer-events-none absolute right-[-22%] top-[-8%] h-[34rem] w-[34rem] text-ink/[0.06] sm:right-[-8%] md:right-[3%]" />
+      <div className="relative mx-auto max-w-content px-5 pb-20 pt-16 sm:pb-28 sm:pt-24">
+        <p
+          className="rise mb-5 text-xs font-semibold uppercase tracking-[0.18em] text-accent"
+          style={{ animationDelay: "0ms" }}
+        >
+          {t(content.hero.tag)}
+        </p>
+        <h1
+          className="rise max-w-[18ch] text-[clamp(2.4rem,7vw,3.75rem)] font-bold leading-[1.05] tracking-tight text-ink"
+          style={{ animationDelay: "80ms" }}
+        >
+          {t(content.hero.title)}
+        </h1>
+        <p
+          className="rise mt-6 max-w-xl text-lg leading-relaxed text-body/80 sm:text-xl"
+          style={{ animationDelay: "160ms" }}
+        >
+          {t(content.hero.subtitle)}
+        </p>
+        <div
+          className="rise mt-9 flex flex-wrap items-center gap-3"
+          style={{ animationDelay: "240ms" }}
+        >
+          <CtaButton className="!px-6 !py-3 !text-base" />
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-ink/15 bg-white px-3.5 py-2 text-sm font-medium text-ink">
+            <Gift size={15} className="text-accent" aria-hidden />
+            {t(content.hero.trial)}
+          </span>
+        </div>
+        <ul
+          className="rise mt-10 flex flex-wrap gap-2.5"
+          style={{ animationDelay: "320ms" }}
+        >
+          {content.hero.chips.map((chip, i) => (
+            <li
+              key={i}
+              className="rounded-full border border-ink/15 bg-white/60 px-3.5 py-1.5 text-sm text-ink/80"
+            >
+              {t(chip)}
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );
