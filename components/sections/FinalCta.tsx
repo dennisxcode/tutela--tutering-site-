@@ -8,8 +8,9 @@ import { Logo } from "@/components/Logo";
 export function FinalCta() {
   const { t } = useLanguage();
   return (
-    <footer id="join" className="bg-ink text-white">
-      <div className="mx-auto max-w-content px-5 py-24 text-center sm:py-32">
+    <footer id="join" className="grain relative overflow-hidden bg-ink text-white">
+      <div className="relative z-10 mx-auto max-w-content px-5 py-24 text-center sm:py-32">
+        <Logo className="mx-auto mb-8 h-12 w-12 text-white/35" />
         <h2 className="font-serif text-3xl font-semibold leading-tight tracking-tight sm:text-[2.5rem]">
           {t(content.finalCta.heading)}
         </h2>

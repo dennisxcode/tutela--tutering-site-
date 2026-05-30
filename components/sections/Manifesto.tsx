@@ -8,7 +8,7 @@ import { content } from "@/lib/content";
 export function Manifesto() {
   const { t } = useLanguage();
   return (
-    <section id="philosophy" className="relative overflow-hidden bg-ink text-cream">
+    <section id="philosophy" className="grain relative overflow-hidden bg-ink text-cream">
       {/* faint keystone arch in the corner */}
       <svg
         viewBox="0 0 120 150"
@@ -20,7 +20,7 @@ export function Manifesto() {
         <path d="M108 144 Q108 42 60 12" stroke="currentColor" strokeWidth={1.6} strokeLinecap="round" />
       </svg>
 
-      <div className="relative mx-auto max-w-content px-5 py-24 sm:py-32">
+      <div className="relative z-10 mx-auto max-w-content px-5 py-24 sm:py-32">
         <p className="font-display text-xl italic text-accent">04</p>
         <h2 className="mt-4 font-serif text-3xl font-semibold leading-tight tracking-tight sm:text-[2.5rem]">
           {t(content.philosophy.title)}

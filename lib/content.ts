@@ -80,8 +80,8 @@ export const content = {
   tutors: {
     title: { zh: "导师团队", en: "The tutors" },
     math: {
-      zh: "数学导师：在 AMC（美国数学竞赛）及 Waterloo（CEMC）数学竞赛中名列前茅。",
-      en: "Math tutor: places among the top in the AMC (American Mathematics Competitions) and Waterloo (CEMC) math contests.",
+      zh: "导师 Chen Chen：在 AMC（美国数学竞赛）及 Waterloo（CEMC）数学竞赛中名列前茅，成绩公开可查。",
+      en: "Tutor Chen Chen: places among the top in the AMC (American Mathematics Competitions) and Waterloo (CEMC) math contests — publicly verifiable results.",
     },
     english: {
       zh: "英语导师：就读于 Brébeuf 最高级别的英语课程，成绩优异。",
