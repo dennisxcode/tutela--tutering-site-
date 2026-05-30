@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, type ReactNode } from "react";
-import { Logo } from "@/components/Logo";
+import { Arch } from "@/components/Arch";
 
 // Editorial section header: a Fraunces section number, a big Chinese-serif
 // title, and a hairline rule that *draws* across as the section enters — like
@@ -51,7 +51,7 @@ export function EditorialSection({
     <section id={id} className={surface ? "bg-white" : "bg-cream"}>
       <div ref={ref} className="mx-auto max-w-content px-5 py-20 sm:py-28">
         <header className="mb-12">
-          <Logo className="mb-4 h-5 w-5 text-ink/30" />
+          <Arch strokeWidth={1.6} className="mb-4 h-8 w-7 text-ink/35" />
           <div className="flex items-baseline gap-4">
             <span className="font-display text-xl font-semibold italic text-accent">{num}</span>
             <h2 className="font-serif text-3xl font-semibold leading-tight tracking-tight text-ink sm:text-[2.5rem]">

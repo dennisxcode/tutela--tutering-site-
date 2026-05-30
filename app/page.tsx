@@ -1,6 +1,7 @@
 import { LanguageProvider } from "@/lib/LanguageContext";
 import { AnnouncementBar } from "@/components/AnnouncementBar";
 import { TopBar } from "@/components/TopBar";
+import { ScrollArch } from "@/components/ScrollArch";
 import { Hero } from "@/components/sections/Hero";
 import { Advantages } from "@/components/sections/Advantages";
 import { Subjects } from "@/components/sections/Subjects";
@@ -29,6 +30,7 @@ export default function Page() {
         <Faq />
         <FinalCta />
       </main>
+      <ScrollArch />
     </LanguageProvider>
   );
 }

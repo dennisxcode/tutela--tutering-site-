@@ -4,7 +4,7 @@ import { Gift } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
 import { content } from "@/lib/content";
 import { CtaButton } from "@/components/CtaButton";
-import { ArchDraw } from "@/components/ArchDraw";
+import { Arch } from "@/components/Arch";
 
 export function Hero() {
   const { t } = useLanguage();
@@ -18,7 +18,10 @@ export function Hero() {
 
       <div className="relative mx-auto flex min-h-[92vh] max-w-content flex-col items-center justify-center px-5 py-24 text-center">
         {/* the arch, drawn on load, framing the headline */}
-        <ArchDraw className="pointer-events-none absolute left-1/2 top-1/2 h-[44rem] w-auto -translate-x-1/2 -translate-y-[52%] text-ink/[0.28]" />
+        <Arch
+          strokeWidth={3}
+          className="pointer-events-none absolute left-1/2 top-1/2 h-[44rem] w-auto -translate-x-1/2 -translate-y-[52%] text-ink/[0.28]"
+        />
 
         <div className="relative">
           <p
