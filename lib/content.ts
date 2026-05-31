@@ -14,6 +14,14 @@ export const content = {
   },
   nav: {
     contact: { zh: "联系我", en: "Contact me" },
+    guides: { zh: "备考指南", en: "Guides" },
+  },
+  guidesIndex: {
+    title: { zh: "备考指南", en: "Prep Guides" },
+    intro: {
+      zh: "关于魁北克中学入学考试的实用指南——由刚刚考过的我们整理。",
+      en: "Practical guides to Quebec's secondary admission exam — from students who just took it.",
+    },
   },
   announcement: {
     zh: "6 月 19 日 家长说明会 · 6 月 26 日 开放报名",

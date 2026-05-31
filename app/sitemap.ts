@@ -1,12 +1,28 @@
 import type { MetadataRoute } from "next";
+import { guides } from "@/lib/guides";
+
+const siteUrl = "https://webtutela.vercel.app";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const now = new Date();
   return [
     {
-      url: "https://webtutela.vercel.app",
-      lastModified: new Date(),
+      url: siteUrl,
+      lastModified: now,
       changeFrequency: "monthly",
       priority: 1,
     },
+    {
+      url: `${siteUrl}/guides`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    ...guides.map((g) => ({
+      url: `${siteUrl}/guides/${g.slug}`,
+      lastModified: new Date(g.updated),
+      changeFrequency: "yearly" as const,
+      priority: 0.7,
+    })),
   ];
 }
