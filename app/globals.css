@@ -31,6 +31,11 @@ body { @apply bg-cream text-body; }
 }
 .arch.in path { stroke-dashoffset: 0; }
 
+/* ---- The segmented arch: one continuous curve revealed in 4 quarters that grow
+   together (the visible dash of each quarter animates from 0 to 1/4). One curve =
+   seamless, gapless joins. ---- */
+.seg-arch path { transition: stroke-dasharray 1.7s cubic-bezier(0.45, 0, 0.15, 1); }
+
 /* Hero text rises as the arch completes. */
 @keyframes rise {
   from { opacity: 0; transform: translateY(14px); }
@@ -67,6 +72,7 @@ body { @apply bg-cream text-body; }
 
 @media (prefers-reduced-motion: reduce) {
   .arch path { transition: none; stroke-dashoffset: 0; }
+  .seg-arch path { transition: none; }
   .rise { animation: none; }
   .rule-draw { transition: none; transform: scaleX(1); }
   .page-enter { animation: none; }
