@@ -4,12 +4,12 @@ import { useLanguage } from "@/lib/LanguageContext";
 import { content } from "@/lib/content";
 import { EditorialSection } from "@/components/EditorialSection";
 
-export function HowItWorks() {
+export function HowItWorks({ num = "02" }: { num?: string }) {
   const { t } = useLanguage();
   return (
     <EditorialSection
       id="how"
-      num="03"
+      num={num}
       title={t(content.howItWorks.title)}
       intro={t(content.howItWorks.body)}
       surface

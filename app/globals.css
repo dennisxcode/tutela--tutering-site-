@@ -38,6 +38,14 @@ body { @apply bg-cream text-body; }
 }
 .rise { animation: rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) both; }
 
+/* Route transition: page content fades + lifts in on navigation and first load.
+   Calm, not a snap; the chrome stays put. */
+@keyframes page-enter {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: none; }
+}
+.page-enter { animation: page-enter 0.42s cubic-bezier(0.16, 1, 0.3, 1) both; }
+
 /* A hairline rule that draws across as a section enters (ruling a line). */
 .rule-draw {
   transform: scaleX(0);
@@ -61,6 +69,7 @@ body { @apply bg-cream text-body; }
   .arch path { transition: none; stroke-dashoffset: 0; }
   .rise { animation: none; }
   .rule-draw { transition: none; transform: scaleX(1); }
+  .page-enter { animation: none; }
 }
 
 /* Language-aware headline serif: Chinese keeps Noto Serif SC; English switches

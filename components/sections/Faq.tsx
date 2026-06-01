@@ -36,11 +36,11 @@ function FaqItem({ q, a }: { q: string; a: string }) {
   );
 }
 
-export function Faq() {
+export function Faq({ num = "06" }: { num?: string }) {
   const { t, locale } = useLanguage();
   const title = locale === "zh" ? "常见问题" : "FAQ";
   return (
-    <EditorialSection id="faq" num="07" title={title}>
+    <EditorialSection id="faq" num={num} title={title}>
       <div className="border-t border-ink/10">
         {content.faq.map((item, i) => (
           <FaqItem key={i} q={t(item.q)} a={t(item.a)} />

@@ -4,7 +4,7 @@ import { Gift } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
 import { content } from "@/lib/content";
 import { CtaButton } from "@/components/CtaButton";
-import { Arch } from "@/components/Arch";
+import { SegmentedArch } from "@/components/SegmentedArch";
 
 export function Hero() {
   const { t } = useLanguage();
@@ -17,8 +17,9 @@ export function Hero() {
       <span className="absolute bottom-5 right-5 h-3.5 w-3.5 border-b border-r border-ink/20" aria-hidden />
 
       <div className="relative mx-auto flex min-h-[92vh] max-w-content flex-col items-center justify-center px-5 py-24 text-center">
-        {/* the arch, drawn on load, framing the headline */}
-        <Arch
+        {/* the arch, drawn on load in 4 parts at once, framing the headline */}
+        <SegmentedArch
+          trigger="load"
           strokeWidth={3}
           className="pointer-events-none absolute left-1/2 top-1/2 h-[44rem] w-auto -translate-x-1/2 -translate-y-[52%] text-ink/[0.28]"
         />

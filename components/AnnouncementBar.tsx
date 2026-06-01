@@ -10,7 +10,7 @@ export function AnnouncementBar() {
   return (
     <div className="bg-ink text-cream">
       <a
-        href="#dates"
+        href="/#dates"
         className="mx-auto flex max-w-content items-center justify-center gap-2 px-5 py-2 text-center text-[13px] font-medium tracking-wide transition hover:opacity-90"
       >
         <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-accent" aria-hidden />

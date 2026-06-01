@@ -3,6 +3,11 @@ import { Noto_Sans_SC, Noto_Serif_SC, Fraunces } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { content } from "@/lib/content";
+import { LanguageProvider } from "@/lib/LanguageContext";
+import { AnnouncementBar } from "@/components/AnnouncementBar";
+import { SiteNav } from "@/components/SiteNav";
+import { FinalCta } from "@/components/sections/FinalCta";
+import { ScrollArch } from "@/components/ScrollArch";
 
 // CJK fonts: do NOT pass `subsets` and set `preload: false`, otherwise
 // next/font errors ("Missing selected font subset") at build.
@@ -67,7 +72,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${noto.variable} ${notoSerif.variable} ${fraunces.variable} scroll-smooth`}
     >
       <body className="font-sans antialiased">
-        {children}
+        <LanguageProvider>
+          <div className="sticky top-0 z-50">
+            <AnnouncementBar />
+            <SiteNav />
+          </div>
+          <main>{children}</main>
+          <FinalCta />
+          <ScrollArch />
+        </LanguageProvider>
         <Analytics />
         <script
           type="application/ld+json"

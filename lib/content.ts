@@ -15,6 +15,14 @@ export const content = {
   nav: {
     contact: { zh: "联系我", en: "Contact me" },
     guides: { zh: "备考指南", en: "Guides" },
+    home: { zh: "首页", en: "Home" },
+    program: { zh: "课程", en: "Program" },
+  },
+  ui: {
+    viewProgram: { zh: "查看完整课程", en: "See the full program" },
+    menu: { zh: "菜单", en: "Menu" },
+    close: { zh: "关闭", en: "Close" },
+    backToTop: { zh: "返回顶部", en: "Back to top" },
   },
   guidesIndex: {
     title: { zh: "备考指南", en: "Prep Guides" },
@@ -193,8 +201,14 @@ export const content = {
         name: { zh: "数学", en: "Math" },
         blurb: {
           zh: "入学考试的核心，重点突破题型与解题速度。",
-          en: "The core of the exam — focused on question types and solving speed.",
+          en: "The core of the exam: question types and solving speed.",
         },
+        covers: [
+          { zh: "数与运算：分数、小数的熟练计算", en: "Number sense: fluent work with fractions and decimals" },
+          { zh: "应用题的审题与解题策略", en: "Reading and solving word problems with clear strategies" },
+          { zh: "几何、图形与空间观念", en: "Geometry, shapes, and spatial reasoning" },
+          { zh: "考试常见题型与时间管理", en: "Common exam question types and time management" },
+        ] as Bi[],
       },
       {
         name: { zh: "法语", en: "French" },
@@ -202,6 +216,12 @@ export const content = {
           zh: "阅读、写作与语法，贴近考试要求。",
           en: "Reading, writing, and grammar, aligned to the exam.",
         },
+        covers: [
+          { zh: "阅读理解：抓住文章重点与细节", en: "Reading comprehension: main ideas and details" },
+          { zh: "写作：结构清晰、表达准确", en: "Writing: clear structure and accurate expression" },
+          { zh: "语法与词汇的系统巩固", en: "Systematic grammar and vocabulary review" },
+          { zh: "答题技巧与考试节奏", en: "Answering technique and exam pacing" },
+        ] as Bi[],
       },
       {
         name: { zh: "英语", en: "English" },
@@ -209,8 +229,14 @@ export const content = {
           zh: "理解与表达并重，打好语言基础。",
           en: "Comprehension and expression, building a solid base.",
         },
+        covers: [
+          { zh: "阅读理解与词汇积累", en: "Reading comprehension and vocabulary" },
+          { zh: "写作与口头表达", en: "Writing and spoken expression" },
+          { zh: "基础语法与常用句型", en: "Foundational grammar and sentence patterns" },
+          { zh: "语感培养与日常运用", en: "Building language sense and everyday use" },
+        ] as Bi[],
       },
-    ] as { name: Bi; blurb: Bi }[],
+    ] as { name: Bi; blurb: Bi; covers: Bi[] }[],
     grades: {
       zh: "适合小学三、四、五年级。除入学考试备考外，我们也提供一般学科辅导。",
       en: "For primary grades 3, 4, and 5. Beyond admission prep, we also offer general academic tutoring.",
@@ -219,6 +245,15 @@ export const content = {
       zh: "有特殊情况（例如 Sec 1 想转入 Sec 2）或想了解一对一辅导，欢迎私信联系我们。",
       en: "For special cases (e.g. a Sec 1 student moving into Sec 2) or one-on-one tutoring, message us privately.",
     },
+  },
+  program: {
+    tag: { zh: "课程", en: "Program" },
+    title: { zh: "我们在课上教什么", en: "What we teach in class" },
+    intro: {
+      zh: "我们的每一节课都围绕中学入学考试展开：把每一科最关键的内容讲清楚，再带孩子练扎实。下面是三门核心科目我们会重点覆盖的部分，以及上课、收费和报名的具体安排。",
+      en: "Every class is built around the secondary admission exam. For each subject we make the key material clear, then practise it until it's solid. Below is what we focus on in the three core subjects, plus how classes, pricing, and enrolment work.",
+    },
+    coversLabel: { zh: "我们会覆盖", en: "What we cover" },
   },
   philosophy: {
     title: { zh: "为什么学生会进步", en: "Why students improve" },

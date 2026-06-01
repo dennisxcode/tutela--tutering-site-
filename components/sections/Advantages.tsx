@@ -6,12 +6,12 @@ import { EditorialSection } from "@/components/EditorialSection";
 
 // Section 01 — our advantages, as proper editorial entries (serif label + a line
 // of explanation each), with the key numbers up top. Replaces the old hero pills.
-export function Advantages() {
+export function Advantages({ num = "01" }: { num?: string }) {
   const { t } = useLanguage();
   return (
     <EditorialSection
       id="advantages"
-      num="01"
+      num={num}
       title={t(content.advantages.title)}
       intro={t(content.advantages.intro)}
       surface

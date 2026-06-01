@@ -11,12 +11,12 @@ const tutors: { label: Bi; line: Bi }[] = [
   { label: { zh: "法语", en: "French" }, line: content.tutors.french },
 ];
 
-export function Tutors() {
+export function Tutors({ num = "04" }: { num?: string }) {
   const { t } = useLanguage();
   return (
     <EditorialSection
       id="tutors"
-      num="05"
+      num={num}
       title={t(content.tutors.title)}
       intro={t(content.subjects.special)}
     >

@@ -1,36 +1,20 @@
-import { LanguageProvider } from "@/lib/LanguageContext";
-import { AnnouncementBar } from "@/components/AnnouncementBar";
-import { TopBar } from "@/components/TopBar";
-import { ScrollArch } from "@/components/ScrollArch";
 import { Hero } from "@/components/sections/Hero";
 import { Advantages } from "@/components/sections/Advantages";
-import { Subjects } from "@/components/sections/Subjects";
-import { HowItWorks } from "@/components/sections/HowItWorks";
-import { Manifesto } from "@/components/sections/Manifesto";
-import { Tutors } from "@/components/sections/Tutors";
+import { HomeOverview } from "@/components/sections/HomeOverview";
+import { ArchDivider } from "@/components/ArchDivider";
 import { KeyDates } from "@/components/sections/KeyDates";
-import { Faq } from "@/components/sections/Faq";
-import { FinalCta } from "@/components/sections/FinalCta";
 
+// Lean, persuasive landing. Depth (the full curriculum, schedule, pricing,
+// tutors, FAQ) lives on /program; general prep info lives on /guides. Chrome
+// (nav + WeChat footer) is provided by the root layout.
 export default function Page() {
   return (
-    <LanguageProvider>
-      <div className="sticky top-0 z-50">
-        <AnnouncementBar />
-        <TopBar />
-      </div>
-      <main>
-        <Hero />
-        <Advantages />
-        <Subjects />
-        <HowItWorks />
-        <Manifesto />
-        <Tutors />
-        <KeyDates />
-        <Faq />
-        <FinalCta />
-      </main>
-      <ScrollArch />
-    </LanguageProvider>
+    <>
+      <Hero />
+      <Advantages num="01" />
+      <HomeOverview num="02" />
+      <ArchDivider className="py-4" />
+      <KeyDates num="03" />
+    </>
   );
 }
