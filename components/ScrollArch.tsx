@@ -1,16 +1,19 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
-// A small fixed arch that fills with terracotta in proportion to how far down the
-// page you've scrolled — you literally complete the arch (pass all the way through
-// the passage) by reaching the bottom. Reduced-motion → shown complete.
 const D = "M16 144 Q16 40 60 16 Q104 40 104 144";
 
 export function ScrollArch() {
+  const pathRef = useRef<SVGPathElement>(null);
+  const [len, setLen] = useState(0);
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
+    // Measure the real path length so dasharray/dashoffset work regardless of
+    // browser pathLength attribute support.
+    if (pathRef.current) setLen(pathRef.current.getTotalLength());
+
     const reduce =
       typeof window.matchMedia === "function" &&
       window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -20,7 +23,7 @@ export function ScrollArch() {
     }
     let raf = 0;
     const update = () => {
-      const max = document.documentElement.scrollHeight - window.innerHeight;
+      const max = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       setProgress(max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0);
     };
     const onScroll = () => {
@@ -29,10 +32,10 @@ export function ScrollArch() {
     };
     update();
     window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onScroll);
+    window.addEventListener("resize", update);
     return () => {
       window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", onScroll);
+      window.removeEventListener("resize", update);
       cancelAnimationFrame(raf);
     };
   }, []);
@@ -42,14 +45,14 @@ export function ScrollArch() {
       <svg viewBox="0 0 120 150" fill="none" className="h-10 w-10">
         <path d={D} stroke="currentColor" className="text-ink/15" strokeWidth={3} strokeLinecap="round" vectorEffect="non-scaling-stroke" />
         <path
+          ref={pathRef}
           d={D}
-          pathLength={1}
           stroke="currentColor"
           className="text-accent"
           strokeWidth={3}
           strokeLinecap="round"
           vectorEffect="non-scaling-stroke"
-          style={{ strokeDasharray: 1, strokeDashoffset: 1 - progress }}
+          style={len > 0 ? { strokeDasharray: len, strokeDashoffset: len * (1 - progress) } : { strokeDasharray: 1, strokeDashoffset: 1 }}
         />
       </svg>
     </div>
