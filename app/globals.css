@@ -46,6 +46,16 @@ body { @apply bg-cream text-body; }
 }
 .page-enter { animation: page-enter 0.42s cubic-bezier(0.16, 1, 0.3, 1) both; }
 
+/* Scroll-driven arch in the corner — pathLength=1 normalises the path; only
+   dashoffset needs to be updated by JS. No transition (scroll IS the animation). */
+.scroll-arch-path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+}
+@media (prefers-reduced-motion: reduce) {
+  .scroll-arch-path { stroke-dashoffset: 0; }
+}
+
 /* A hairline rule that draws across as a section enters (ruling a line). */
 .rule-draw {
   transform: scaleX(0);

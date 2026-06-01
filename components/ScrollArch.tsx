@@ -11,27 +11,22 @@ export function ScrollArch() {
     const path = pathRef.current;
     if (!path) return;
 
-    const len = path.getTotalLength();
-    path.style.strokeDasharray = String(len);
-
     const reduce =
       typeof window.matchMedia === "function" &&
       window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-    if (reduce) {
-      path.style.strokeDashoffset = "0";
-      return;
-    }
-
-    // Start hidden
-    path.style.strokeDashoffset = String(len);
+    if (reduce) return; // CSS prefers-reduced-motion rule shows it complete
 
     let raf = 0;
     const update = () => {
-      const max = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      // Recalculate max every tick so late-loading content doesn't throw it off.
+      const max =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
       const p = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
-      path.style.strokeDashoffset = String(len * (1 - p));
+      // pathLength="1" normalises the path to 1 unit; dashoffset 1→0 draws it.
+      path.style.strokeDashoffset = String(1 - p);
     };
+
     const onScroll = () => {
       cancelAnimationFrame(raf);
       raf = requestAnimationFrame(update);
@@ -50,12 +45,23 @@ export function ScrollArch() {
   return (
     <div className="fixed bottom-5 right-5 z-40" aria-hidden>
       <svg viewBox="0 0 120 150" fill="none" className="h-10 w-10">
-        <path d={D} stroke="currentColor" className="text-ink/15" strokeWidth={3} strokeLinecap="round" vectorEffect="non-scaling-stroke" />
+        {/* ghost arch — always visible as a guide */}
+        <path
+          d={D}
+          pathLength={1}
+          stroke="currentColor"
+          className="text-ink/15"
+          strokeWidth={3}
+          strokeLinecap="round"
+          vectorEffect="non-scaling-stroke"
+        />
+        {/* fill arch — CSS sets dasharray:1 via .scroll-arch-path; JS sets dashoffset */}
         <path
           ref={pathRef}
           d={D}
+          pathLength={1}
           stroke="currentColor"
-          className="text-accent"
+          className="scroll-arch-path text-accent"
           strokeWidth={3}
           strokeLinecap="round"
           vectorEffect="non-scaling-stroke"
