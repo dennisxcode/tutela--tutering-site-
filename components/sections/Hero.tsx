@@ -1,6 +1,5 @@
 "use client";
 
-import { Gift } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
 import { content } from "@/lib/content";
 import { CtaButton } from "@/components/CtaButton";
@@ -46,13 +45,6 @@ export function Hero() {
           <div className="rise mt-9 flex justify-center" style={{ animationDelay: "750ms" }}>
             <CtaButton className="!px-6 !py-3 !text-base" />
           </div>
-          <p
-            className="rise mt-5 flex items-center justify-center gap-1.5 text-sm text-body/60"
-            style={{ animationDelay: "850ms" }}
-          >
-            <Gift size={14} className="text-accent" aria-hidden />
-            {t(content.hero.trial)}
-          </p>
         </div>
       </div>
     </section>

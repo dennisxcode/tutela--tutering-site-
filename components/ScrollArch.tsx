@@ -20,9 +20,8 @@ export function ScrollArch() {
     }
     let raf = 0;
     const update = () => {
-      const el = document.documentElement;
-      const max = el.scrollHeight - el.clientHeight;
-      setProgress(max > 0 ? Math.min(1, Math.max(0, el.scrollTop / max)) : 0);
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      setProgress(max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0);
     };
     const onScroll = () => {
       cancelAnimationFrame(raf);
@@ -46,7 +45,7 @@ export function ScrollArch() {
           d={D}
           pathLength={1}
           stroke="currentColor"
-          className="text-accent transition-[stroke-dashoffset] duration-200 ease-out"
+          className="text-accent"
           strokeWidth={3}
           strokeLinecap="round"
           vectorEffect="non-scaling-stroke"

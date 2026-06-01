@@ -42,10 +42,6 @@ export const content = {
       zh: "我们是刚刚考过入学考试的尖子生，帮助孩子顺利通过考试。",
       en: "We're top students who just passed the admission exams, here to help your child pass theirs.",
     },
-    trial: {
-      zh: "首次免费试听 · 满意再报名",
-      en: "First lesson free — enrol only if you're happy",
-    },
   },
   stats: [
     { value: { zh: "5–10", en: "5–10" }, label: { zh: "人 / 每班", en: "per class" } },
@@ -179,13 +175,6 @@ export const content = {
         body: {
           zh: "周六上午授课，线上线下结合，按孩子的情况安排。",
           en: "Saturday mornings, in-person and online combined, arranged to suit your child.",
-        },
-      },
-      {
-        title: { zh: "免费试听", en: "Free trial" },
-        body: {
-          zh: "首次免费试听，满意再报名，零风险。",
-          en: "Your first lesson is free — enrol only if you're happy.",
         },
       },
     ] as { title: Bi; body: Bi }[],
@@ -391,8 +380,8 @@ export const content = {
   finalCta: {
     heading: { zh: "准备好帮孩子开始了吗？", en: "Ready to help your child get started?" },
     subtitle: {
-      zh: "扫码联系我们，先免费试听，满意再报名。",
-      en: "Message us on WeChat — start with a free trial, enrol only if you're happy.",
+      zh: "扫码联系我们，了解详情并开始报名。",
+      en: "Message us on WeChat to learn more and get started.",
     },
   },
   footer: {
