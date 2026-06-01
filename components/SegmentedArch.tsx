@@ -3,15 +3,23 @@
 import { useEffect, useRef, useState } from "react";
 
 // The signature motion: the pointed arch drawn in FOUR parts that all move at the
-// same time, at the brand's calm pace (1.7s, easing cubic-bezier(0.45,0,0.15,1)).
+// same time, at the brand's calm pace (1.7s stroke draw, easing
+// cubic-bezier(0.45,0,0.15,1) via the global `.arch` / `.arch.in` rules).
 //
-// Crucially this is ONE continuous path drawn four times, each copy revealing a
-// different quarter via stroke-dasharray. Because every copy traces the *same*
-// curve, the four growing pieces meet seamlessly with no gaps at the joins (the
-// earlier version used four separate sub-paths, which left hairline gaps where
-// they met when scaled up). Reduced-motion shows the complete arch immediately.
-const ARCH = "M16 144 Q16 40 60 16 Q104 40 104 144";
-const PARTS = 4;
+// Each part is a real sub-path of the arch, drawn with stroke-dashOFFSET (the dash
+// stays full-length and is only offset out of view, so it NEVER shrinks to a
+// zero-length dash — that, with round caps, is what produced stray dots and gaps
+// in earlier attempts). The four sub-paths share exact endpoints, so their round
+// caps overlap and the joins are seamless. Reduced-motion shows it complete.
+//
+// The sub-paths are the two legs of `M16 144 Q16 40 60 16 Q104 40 104 144`, each
+// split at its midpoint (De Casteljau), so together they reform the exact arch.
+const SEGMENTS = [
+  "M16 144 Q16 92 27 60",
+  "M27 60 Q38 28 60 16",
+  "M60 16 Q82 28 93 60",
+  "M93 60 Q104 92 104 144",
+];
 
 export function SegmentedArch({
   className = "",
@@ -56,27 +64,20 @@ export function SegmentedArch({
       viewBox="0 0 120 150"
       fill="none"
       aria-hidden
-      className={`seg-arch ${className}`}
+      className={`arch ${shown ? "in" : ""} ${className}`}
     >
-      {Array.from({ length: PARTS }).map((_, i) => {
-        const start = i / PARTS; // where this quarter begins along the path
-        const len = 1 / PARTS; // each quarter is 1/4 of the path
-        // dasharray: [dash0=0, gap=start, dash=visible, gap=rest]. The visible dash
-        // grows from 0 to `len`, starting at `start`, so all four reveal at once.
-        const dash = `0 ${start} ${shown ? len : 0} 1`;
-        return (
-          <path
-            key={i}
-            d={ARCH}
-            pathLength={1}
-            stroke="currentColor"
-            strokeWidth={strokeWidth}
-            strokeLinecap="round"
-            vectorEffect="non-scaling-stroke"
-            style={{ strokeDasharray: dash }}
-          />
-        );
-      })}
+      {SEGMENTS.map((d, i) => (
+        <path
+          key={i}
+          d={d}
+          pathLength={1}
+          stroke="currentColor"
+          strokeWidth={strokeWidth}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          vectorEffect="non-scaling-stroke"
+        />
+      ))}
     </svg>
   );
 }
