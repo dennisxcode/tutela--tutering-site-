@@ -1,35 +1,42 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 const D = "M16 144 Q16 40 60 16 Q104 40 104 144";
 
 export function ScrollArch() {
   const pathRef = useRef<SVGPathElement>(null);
-  const [len, setLen] = useState(0);
-  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    // Measure the real path length so dasharray/dashoffset work regardless of
-    // browser pathLength attribute support.
-    if (pathRef.current) setLen(pathRef.current.getTotalLength());
+    const path = pathRef.current;
+    if (!path) return;
+
+    const len = path.getTotalLength();
+    path.style.strokeDasharray = String(len);
 
     const reduce =
       typeof window.matchMedia === "function" &&
       window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
     if (reduce) {
-      setProgress(1);
+      path.style.strokeDashoffset = "0";
       return;
     }
+
+    // Start hidden
+    path.style.strokeDashoffset = String(len);
+
     let raf = 0;
     const update = () => {
       const max = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      setProgress(max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0);
+      const p = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
+      path.style.strokeDashoffset = String(len * (1 - p));
     };
     const onScroll = () => {
       cancelAnimationFrame(raf);
       raf = requestAnimationFrame(update);
     };
+
     update();
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", update);
@@ -52,7 +59,6 @@ export function ScrollArch() {
           strokeWidth={3}
           strokeLinecap="round"
           vectorEffect="non-scaling-stroke"
-          style={len > 0 ? { strokeDasharray: len, strokeDashoffset: len * (1 - progress) } : { strokeDasharray: 1, strokeDashoffset: 1 }}
         />
       </svg>
     </div>
