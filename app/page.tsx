@@ -1,4 +1,5 @@
 import { Hero } from "@/components/sections/Hero";
+import { WhoWeAre } from "@/components/sections/WhoWeAre";
 import { Advantages } from "@/components/sections/Advantages";
 import { HomeOverview } from "@/components/sections/HomeOverview";
 import { ArchDivider } from "@/components/ArchDivider";
@@ -11,6 +12,7 @@ export default function Page() {
   return (
     <>
       <Hero />
+      <WhoWeAre />
       <Advantages num="01" />
       <HomeOverview num="02" />
       <ArchDivider className="py-4" />

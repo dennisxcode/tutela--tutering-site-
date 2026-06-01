@@ -2,24 +2,17 @@
 
 import { useEffect, useRef, useState } from "react";
 
-// The signature motion: the pointed arch drawn in FOUR parts that all move at the
-// same time, at the brand's calm pace (1.7s stroke draw, easing
-// cubic-bezier(0.45,0,0.15,1) via the global `.arch` / `.arch.in` rules).
+// The arch motion: one continuous pointed-arch stroke that draws itself at the
+// brand's calm pace (1.7s, easing cubic-bezier(0.45,0,0.15,1) via the global
+// `.arch` / `.arch.in` rules).
 //
-// Each part is a real sub-path of the arch, drawn with stroke-dashOFFSET (the dash
-// stays full-length and is only offset out of view, so it NEVER shrinks to a
-// zero-length dash — that, with round caps, is what produced stray dots and gaps
-// in earlier attempts). The four sub-paths share exact endpoints, so their round
-// caps overlap and the joins are seamless. Reduced-motion shows it complete.
-//
-// The sub-paths are the two legs of `M16 144 Q16 40 60 16 Q104 40 104 144`, each
-// split at its midpoint (De Casteljau), so together they reform the exact arch.
-const SEGMENTS = [
-  "M16 144 Q16 92 27 60",
-  "M27 60 Q38 28 60 16",
-  "M60 16 Q82 28 93 60",
-  "M93 60 Q104 92 104 144",
-];
+// Note on "4 parts": we tried splitting the arch into separate sub-paths so the
+// pieces would draw simultaneously, but separately-stroked sub-paths always leave
+// visible seams/gaps at their joins (each dashed sub-path renders a hair short,
+// and across joins that reads as gaps — exactly the "not completed" look). A
+// single continuous path is the only way to draw the arch with zero gaps, so the
+// signature is one clean unbroken stroke. Reduced-motion shows it complete.
+const ARCH = "M16 144 Q16 40 60 16 Q104 40 104 144";
 
 export function SegmentedArch({
   className = "",
@@ -66,18 +59,14 @@ export function SegmentedArch({
       aria-hidden
       className={`arch ${shown ? "in" : ""} ${className}`}
     >
-      {SEGMENTS.map((d, i) => (
-        <path
-          key={i}
-          d={d}
-          pathLength={1}
-          stroke="currentColor"
-          strokeWidth={strokeWidth}
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          vectorEffect="non-scaling-stroke"
-        />
-      ))}
+      <path
+        pathLength={1}
+        d={ARCH}
+        stroke="currentColor"
+        strokeWidth={strokeWidth}
+        strokeLinecap="round"
+        vectorEffect="non-scaling-stroke"
+      />
     </svg>
   );
 }
