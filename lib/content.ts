@@ -44,7 +44,7 @@ export const content = {
     },
   },
   stats: [
-    { value: { zh: "5–10", en: "5–10" }, label: { zh: "人 / 每班", en: "per class" } },
+    { value: { zh: "1–10", en: "1–10" }, label: { zh: "人 / 每班", en: "per class" } },
     { value: { zh: "3", en: "3" }, label: { zh: "门科目", en: "subjects" } },
     { value: { zh: "周六", en: "Sat" }, label: { zh: "上午授课", en: "mornings" } },
   ] as { value: Bi; label: Bi }[],
@@ -60,8 +60,8 @@ export const content = {
         en: "Our tutors all attend top Quebec secondary schools, including Collège Jean-de-Brébeuf.",
       },
       {
-        zh: "5–10 人小班，名额有限，确保每个孩子都得到充分关注。",
-        en: "Small classes of 5–10 with limited spots, so every child gets real attention.",
+        zh: "1–10 人小班，名额有限，确保每个孩子都得到充分关注。",
+        en: "Small classes of 1–10 with limited spots, so every child gets real attention.",
       },
     ] as Bi[],
   },
@@ -102,7 +102,7 @@ export const content = {
     title: { zh: "上课方式", en: "How it works" },
     body: {
       zh: "小组课程在每周六上午9点至12点进行。每组人数设定在5至10人，这样每个孩子都能得到足够的关注。我们采用线下 + 线上结合的方式，根据孩子的情况灵活安排。上课地点正在确认中，确定后会第一时间在家长群通知。",
-      en: "Group classes run every Saturday, 9:00 AM–12:00 PM. Each group is kept to 5–10 students so every child gets enough attention. We combine in-person and online formats, arranged to suit your child. The class location is being finalized and will be announced in the parents' group as soon as it's confirmed.",
+      en: "Group classes run every Saturday, 9:00 AM–12:00 PM. Each group is kept to 1–10 students so every child gets enough attention. We combine in-person and online formats, arranged to suit your child. The class location is being finalized and will be announced in the parents' group as soon as it's confirmed.",
     },
   },
   pricing: {
@@ -145,8 +145,8 @@ export const content = {
       {
         title: { zh: "小班教学", en: "Small classes" },
         body: {
-          zh: "每组 5–10 人，名额有限，每个孩子都能得到充分关注。",
-          en: "Groups of 5–10 with limited spots, so every child gets real attention.",
+          zh: "每组 1–10 人，名额有限，每个孩子都能得到充分关注。",
+          en: "Groups of 1–10 with limited spots, so every child gets real attention.",
         },
       },
       {
@@ -261,8 +261,8 @@ export const content = {
       {
         title: { zh: "小班，真关注", en: "Small groups, real attention" },
         body: {
-          zh: "每组 5–10 人，名额有限，老师能照顾到每个孩子的薄弱点。",
-          en: "Groups of 5–10 with limited spots, so each tutor can address every child's weak spots.",
+          zh: "每组 1–10 人，名额有限，老师能照顾到每个孩子的薄弱点。",
+          en: "Groups of 1–10 with limited spots, so each tutor can address every child's weak spots.",
         },
       },
       {
@@ -324,7 +324,7 @@ export const content = {
       q: { zh: "小班课通常有几个人？", en: "How many students are in a group class?" },
       a: {
         zh: "我们将每组人数设定在5至10人，这样每个孩子都能得到足够的关注，学习效果更好。",
-        en: "We keep groups to 5–10 students so every child gets enough attention and learns better.",
+        en: "We keep groups to 1–10 students so every child gets enough attention and learns better.",
       },
     },
     {
@@ -407,6 +407,8 @@ export const content = {
       zh: "© 2026 Tutela · 蒙特利尔升学辅导",
       en: "© 2026 Tutela · Montreal admission-exam tutoring",
     },
+    privacyLink: { zh: "隐私政策", en: "Privacy Policy" },
+    termsLink: { zh: "服务条款", en: "Terms of Service" },
   },
 };
 

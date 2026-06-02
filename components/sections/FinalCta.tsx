@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useLanguage } from "@/lib/LanguageContext";
 import { content } from "@/lib/content";
 import { WeChatCta } from "@/components/WeChatCta";
@@ -35,6 +36,15 @@ export function FinalCta() {
           <p className="max-w-xs text-xs leading-relaxed text-white/50">
             {t(content.footer.privacy)}
           </p>
+          <div className="flex items-center gap-4 text-xs text-white/40">
+            <Link href="/privacy" className="hover:text-white/70 transition-colors">
+              {t(content.footer.privacyLink)}
+            </Link>
+            <span aria-hidden>·</span>
+            <Link href="/terms" className="hover:text-white/70 transition-colors">
+              {t(content.footer.termsLink)}
+            </Link>
+          </div>
         </div>
       </div>
       <div className="border-t border-white/10">
