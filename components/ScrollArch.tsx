@@ -14,17 +14,27 @@ export function ScrollArch() {
     const reduce =
       typeof window.matchMedia === "function" &&
       window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduce) return; // CSS prefers-reduced-motion rule shows it complete
+    if (reduce) return;
 
     let raf = 0;
     const update = () => {
-      // Recalculate max every tick so late-loading content doesn't throw it off.
-      const max =
-        document.documentElement.scrollHeight -
-        document.documentElement.clientHeight;
-      const p = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
-      // pathLength="1" normalises the path to 1 unit; dashoffset 1→0 draws it.
-      path.style.strokeDashoffset = String(1 - p);
+      const scrollY = window.pageYOffset;
+      // Anchor progress to the footer's DOM position rather than scrollHeight/
+      // clientHeight — those browser APIs are unreliable across devices, sticky
+      // headers, and iOS Safari viewport changes.
+      //
+      // p = scrollY / (footerAbsoluteTop - innerHeight)
+      //   = 0 at page top
+      //   = 1 when the footer first enters the bottom of the viewport
+      //
+      // footer.getBoundingClientRect().top + scrollY = footerAbsoluteTop,
+      // which is a constant independent of scroll position.
+      const footer = document.getElementById("join");
+      const max = footer
+        ? footer.getBoundingClientRect().top + scrollY - window.innerHeight
+        : 0;
+      const p = max > 0 ? Math.min(1, Math.max(0, scrollY / max)) : 0;
+      path.style.setProperty("stroke-dashoffset", String(1 - p));
     };
 
     const onScroll = () => {
@@ -35,9 +45,11 @@ export function ScrollArch() {
     update();
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", update);
+    window.addEventListener("load", update);
     return () => {
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", update);
+      window.removeEventListener("load", update);
       cancelAnimationFrame(raf);
     };
   }, []);
