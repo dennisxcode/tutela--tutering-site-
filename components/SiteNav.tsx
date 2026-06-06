@@ -36,7 +36,7 @@ export function SiteNav() {
       <nav className="mx-auto flex max-w-content items-center justify-between px-5 py-3">
         <Link href="/" className="flex items-center gap-2 text-ink" aria-label="Tutela">
           <Logo className="h-7 w-7" />
-          <TutelaWordmark />
+          <TutelaWordmark name={t(content.meta.brand)} />
         </Link>
 
         {/* desktop links */}

@@ -30,7 +30,7 @@ export function FinalCta() {
         <div className="mt-12 flex flex-col items-center gap-3">
           <span className="flex items-center gap-2 text-white">
             <Logo className="h-6 w-6" />
-            <TutelaWordmark size="sm" />
+            <TutelaWordmark name={t(content.meta.brand)} size="sm" />
           </span>
           <p className="max-w-xs text-xs leading-relaxed text-white/50">
             {t(content.footer.privacy)}

@@ -3,14 +3,14 @@ export type Bi = { zh: string; en: string };
 export const content = {
   meta: {
     title: {
-      zh: "Tutela · 中学入学考试辅导",
+      zh: "识途学辅 · 中学入学考试辅导",
       en: "Tutela · Secondary Admission Exam Tutoring",
     },
     description: {
       zh: "由亲身经历过中学入学考试的尖子生提供的小组辅导。",
       en: "Small-group secondary admission exam tutoring by students who've been through the exams themselves.",
     },
-    brand: { zh: "Tutela", en: "Tutela" },
+    brand: { zh: "识途学辅", en: "Tutela" },
   },
   nav: {
     contact: { zh: "联系我", en: "Contact me" },
@@ -86,22 +86,22 @@ export const content = {
   tutors: {
     title: { zh: "导师团队", en: "The tutors" },
     math: {
-      zh: "数学导师在 AMC（美国数学竞赛）及 Waterloo（CEMC）数学竞赛中名列前茅，成绩公开可查。",
-      en: "Our math tutor places among the top in AMC (American Mathematics Competitions) and Waterloo (CEMC) math contests (publicly verifiable).",
+      zh: "数学导师在 AMC（美国数学竞赛）及 Waterloo（CEMC）数学竞赛中名列前茅。",
+      en: "Our math tutor places among the top in AMC (American Mathematics Competitions) and Waterloo (CEMC) math contests.",
     },
     english: {
-      zh: "英语导师就读于 Brébeuf 最高级别的英语课程，是学校要求最严格的英语班，成绩优异。",
-      en: "Our English tutor is placed in the highest level of English at Brébeuf, one of the school's most demanding streams, with excellent results.",
+      zh: "英语导师就读于 Brébeuf 最高级别的英语课程，成绩优异。",
+      en: "Our English tutor is enrolled in the highest level of English at Brébeuf, with excellent results.",
     },
     french: {
-      zh: "法语导师曾多次赢得 Brébeuf 写作比赛，是学校公认的优秀写手。",
-      en: "Our French tutor has won Brébeuf's writing competitions multiple times, recognised as one of the school's top student writers.",
+      zh: "法语导师曾多次在 Brébeuf 写作比赛中获奖。",
+      en: "Our French tutor has won Brébeuf writing competitions multiple times.",
     },
   },
   howItWorks: {
     title: { zh: "上课方式", en: "How it works" },
     body: {
-      zh: "小组课程在每周六上午9点至12点进行。每组人数设定在5至10人，这样每个孩子都能得到足够的关注。我们采用线下 + 线上结合的方式，根据孩子的情况灵活安排。上课地点正在确认中，确定后会第一时间在家长群通知。",
+      zh: "小组课程在每周六上午9点至12点进行。每组人数设定在1至10人，这样每个孩子都能得到足够的关注。我们采用线下 + 线上结合的方式，根据孩子的情况灵活安排。上课地点正在确认中，确定后会第一时间在家长群通知。",
       en: "Group classes run every Saturday, 9:00 AM–12:00 PM. Each group is kept to 1–10 students so every child gets enough attention. We combine in-person and online formats, arranged to suit your child. The class location is being finalized and will be announced in the parents' group as soon as it's confirmed.",
     },
   },
@@ -309,7 +309,7 @@ export const content = {
     {
       q: { zh: "小班课通常有几个人？", en: "How many students are in a group class?" },
       a: {
-        zh: "我们将每组人数设定在5至10人，这样每个孩子都能得到足够的关注，学习效果更好。",
+        zh: "我们将每组人数设定在1至10人，这样每个孩子都能得到足够的关注，学习效果更好。",
         en: "We keep groups to 1–10 students so every child gets enough attention and learns better.",
       },
     },
@@ -390,7 +390,7 @@ export const content = {
       en: "Your contact details are used only to reach you about classes.",
     },
     copyright: {
-      zh: "© 2026 Tutela · 蒙特利尔升学辅导",
+      zh: "© 2026 识途学辅 · 蒙特利尔升学辅导",
       en: "© 2026 Tutela · Montreal admission-exam tutoring",
     },
     privacyLink: { zh: "隐私政策", en: "Privacy Policy" },

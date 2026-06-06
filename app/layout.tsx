@@ -37,7 +37,7 @@ const fraunces = Fraunces({
 });
 
 
-const siteUrl = "https://webtutela.vercel.app";
+const siteUrl = "https://tutelamtl.ca";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -84,7 +84,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Analytics />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd).replace(/</g, "\\u003c").replace(/>/g, "\\u003e").replace(/&/g, "\\u0026") }}
         />
       </body>
     </html>

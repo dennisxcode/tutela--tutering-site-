@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { guides, getGuide } from "@/lib/guides";
 import { GuideArticle } from "@/components/guides/GuideArticle";
 
-const siteUrl = "https://webtutela.vercel.app";
+const siteUrl = "https://tutelamtl.ca";
 
 export function generateStaticParams() {
   return guides.map((g) => ({ slug: g.slug }));
@@ -47,7 +47,7 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
       <GuideArticle guide={g} />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c").replace(/>/g, "\\u003e").replace(/&/g, "\\u0026") }}
       />
     </>
   );

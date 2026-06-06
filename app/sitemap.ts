@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { guides } from "@/lib/guides";
 
-const siteUrl = "https://webtutela.vercel.app";
+const siteUrl = "https://tutelamtl.ca";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();

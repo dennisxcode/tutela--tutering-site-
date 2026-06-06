@@ -33,7 +33,7 @@ export default function TermsPage() {
           <div className="mt-3 space-y-4 text-base leading-relaxed">
             <p>
               These Terms of Service govern your use of the Tutela website
-              (webtutela.vercel.app) and tutoring services, operated by Dennis (Montreal,
+              (tutelamtl.ca) and tutoring services, operated by Dennis (Montreal,
               Quebec, Canada). By contacting us or enrolling in classes, you agree to these terms.
             </p>
           </div>
