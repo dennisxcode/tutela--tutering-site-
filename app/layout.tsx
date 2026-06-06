@@ -27,8 +27,7 @@ const notoSerif = Noto_Serif_SC({
   variable: "--font-noto-serif-sc",
 });
 
-// Display serif used only for the "Tutela" wordmark — gives the brand
-// some character. Latin-only, so a subset is fine here.
+// Kept for decorative italic accents (section numbers, pull-quotes).
 const fraunces = Fraunces({
   subsets: ["latin"],
   weight: ["600"],
@@ -36,6 +35,7 @@ const fraunces = Fraunces({
   display: "swap",
   variable: "--font-fraunces",
 });
+
 
 const siteUrl = "https://webtutela.vercel.app";
 

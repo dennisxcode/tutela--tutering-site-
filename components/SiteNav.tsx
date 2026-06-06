@@ -9,6 +9,7 @@ import { content } from "@/lib/content";
 import { LanguageToggle } from "@/components/LanguageToggle";
 import { CtaButton } from "@/components/CtaButton";
 import { Logo } from "@/components/Logo";
+import { TutelaWordmark } from "@/components/TutelaWordmark";
 
 type NavLink = { href: string; label: typeof content.nav.program };
 
@@ -35,9 +36,7 @@ export function SiteNav() {
       <nav className="mx-auto flex max-w-content items-center justify-between px-5 py-3">
         <Link href="/" className="flex items-center gap-2 text-ink" aria-label="Tutela">
           <Logo className="h-7 w-7" />
-          <span className="font-display text-2xl font-semibold italic leading-none">
-            {t(content.meta.brand)}
-          </span>
+          <TutelaWordmark />
         </Link>
 
         {/* desktop links */}

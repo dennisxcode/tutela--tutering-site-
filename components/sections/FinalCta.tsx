@@ -5,6 +5,7 @@ import { useLanguage } from "@/lib/LanguageContext";
 import { content } from "@/lib/content";
 import { WeChatCta } from "@/components/WeChatCta";
 import { Logo } from "@/components/Logo";
+import { TutelaWordmark } from "@/components/TutelaWordmark";
 import { SegmentedArch } from "@/components/SegmentedArch";
 import { ArchTop } from "@/components/ArchTop";
 
@@ -29,9 +30,7 @@ export function FinalCta() {
         <div className="mt-12 flex flex-col items-center gap-3">
           <span className="flex items-center gap-2 text-white">
             <Logo className="h-6 w-6" />
-            <span className="font-display text-xl font-semibold italic leading-none">
-              {t(content.meta.brand)}
-            </span>
+            <TutelaWordmark size="sm" />
           </span>
           <p className="max-w-xs text-xs leading-relaxed text-white/50">
             {t(content.footer.privacy)}

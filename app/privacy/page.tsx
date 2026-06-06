@@ -51,15 +51,15 @@ export default function PrivacyPage() {
             <p>We collect only what you voluntarily give us:</p>
             <ul className="ml-5 list-disc space-y-2">
               <li>
-                <strong>Contact information</strong> — your name and WeChat ID when you message
+                <strong>Contact information</strong>: your name and WeChat ID when you message
                 us to inquire about classes or enroll.
               </li>
               <li>
-                <strong>Your child&apos;s grade level</strong> — so we can place them in the
+                <strong>Your child&apos;s grade level</strong>: so we can place them in the
                 correct group.
               </li>
               <li>
-                <strong>Website usage data</strong> — Tutela uses Vercel Analytics, a
+                <strong>Website usage data</strong>: Tutela uses Vercel Analytics, a
                 privacy-focused analytics tool that collects anonymized, aggregated data
                 (page views, referrers, country). No cookies are set; no personal identifiers
                 are tracked.
@@ -96,7 +96,7 @@ export default function PrivacyPage() {
           </h2>
           <div className="mt-3 space-y-4 text-base leading-relaxed">
             <p>
-              We process your personal information on the basis of your consent — you provide
+              We process your personal information on the basis of your consent; you provide
               it freely when you initiate contact with us via WeChat. You may withdraw consent
               at any time by asking us to stop contacting you.
             </p>
@@ -128,12 +128,12 @@ export default function PrivacyPage() {
           </h2>
           <div className="mt-3 space-y-4 text-base leading-relaxed">
             <p>
-              <strong>Vercel Analytics</strong> — our hosting platform (Vercel Inc.) provides
+              <strong>Vercel Analytics</strong>: our hosting platform (Vercel Inc.) provides
               anonymized analytics on website usage. No personal data is passed to Vercel
               Analytics. Vercel&apos;s privacy policy is available at vercel.com/legal/privacy-policy.
             </p>
             <p>
-              <strong>WeChat</strong> — communication occurs over WeChat (Tencent). WeChat&apos;s
+              <strong>WeChat</strong>: communication occurs over WeChat (Tencent). WeChat&apos;s
               privacy practices are governed by Tencent&apos;s privacy policy. We have no control
               over data processed by WeChat.
             </p>
@@ -154,7 +154,7 @@ export default function PrivacyPage() {
               <li><strong>Correct</strong> inaccurate information.</li>
               <li><strong>Request deletion</strong> of your information (subject to legal retention requirements).</li>
               <li><strong>Withdraw consent</strong> and ask us to stop processing your data.</li>
-              <li><strong>Portability</strong> — receive your data in a structured format.</li>
+              <li><strong>Portability</strong>: receive your data in a structured format.</li>
             </ul>
             <p>
               To exercise any of these rights, contact us via WeChat:{" "}

@@ -7,8 +7,8 @@ export const content = {
       en: "Tutela · Secondary Admission Exam Tutoring",
     },
     description: {
-      zh: "由刚刚考过入学考试的尖子生提供的中学入学考试小组辅导。",
-      en: "Small-group secondary admission exam tutoring by students who just aced the exams.",
+      zh: "由亲身经历过中学入学考试的尖子生提供的小组辅导。",
+      en: "Small-group secondary admission exam tutoring by students who've been through the exams themselves.",
     },
     brand: { zh: "Tutela", en: "Tutela" },
   },
@@ -27,8 +27,8 @@ export const content = {
   guidesIndex: {
     title: { zh: "备考指南", en: "Prep Guides" },
     intro: {
-      zh: "关于魁北克中学入学考试的实用指南——由刚刚考过的我们整理。",
-      en: "Practical guides to Quebec's secondary admission exam — from students who just took it.",
+      zh: "关于魁北克中学入学考试的实用指南，由亲身经历这场考试的我们整理。",
+      en: "Practical guides to Quebec's secondary admission exam, from students who've been through it themselves.",
     },
   },
   announcement: {
@@ -39,8 +39,8 @@ export const content = {
     tag: { zh: "蒙特利尔 · 中学入学考试备考", en: "Montreal · Secondary admission exam prep" },
     title: { zh: "中学入学考试辅导", en: "Secondary Admission Exam Tutoring" },
     subtitle: {
-      zh: "我们是刚刚考过入学考试的尖子生，帮助孩子顺利通过考试。",
-      en: "We're top students who just passed the admission exams, here to help your child pass theirs.",
+      zh: "我们是亲身经历过中学入学考试的尖子生，帮助孩子顺利通过考试。",
+      en: "We're top students who've sat the same admission exams, here to help your child pass theirs.",
     },
   },
   stats: [
@@ -52,8 +52,8 @@ export const content = {
     title: { zh: "为什么选择我们", en: "Why choose us" },
     points: [
       {
-        zh: "我们刚刚考过同样的入学考试，最清楚考什么、该怎么准备。",
-        en: "We just sat the same admission exams ourselves — we know exactly what they test and how to prepare.",
+        zh: "我们亲身考过同样的入学考试，最清楚考什么、该怎么准备。",
+        en: "We've sat the same admission exams ourselves: we know exactly what they test and how to prepare.",
       },
       {
         zh: "导师均就读于魁北克顶尖中学，包括 Collège Jean-de-Brébeuf。",
@@ -68,8 +68,8 @@ export const content = {
   whoWeAre: {
     title: { zh: "关于我们", en: "Who we are" },
     body: {
-      zh: "我们是来自魁北克顶尖中学的学生，包括 Collège Jean-de-Brébeuf。我们刚刚走过中学入学考试这条路，希望把自己的备考经验，分享给正在准备的孩子和家庭。",
-      en: "We're students from top Quebec secondary schools, including Collège Jean-de-Brébeuf. We've just been through the secondary admission exams ourselves, and we want to share what we learned with the children and families preparing for them now.",
+      zh: "我们是来自魁北克顶尖中学的学生，包括 Collège Jean-de-Brébeuf。我们走过了中学入学考试这条路，希望把自己的备考经验，分享给正在准备的孩子和家庭。",
+      en: "We're students from top Quebec secondary schools, including Collège Jean-de-Brébeuf. We've been through the secondary admission exams ourselves, and we want to share what we learned with the children and families preparing for them now.",
     },
   },
   whatWeOffer: {
@@ -86,16 +86,16 @@ export const content = {
   tutors: {
     title: { zh: "导师团队", en: "The tutors" },
     math: {
-      zh: "导师 Chen Chen：在 AMC（美国数学竞赛）及 Waterloo（CEMC）数学竞赛中名列前茅，成绩公开可查。",
-      en: "Tutor Chen Chen: places among the top in the AMC (American Mathematics Competitions) and Waterloo (CEMC) math contests — publicly verifiable results.",
+      zh: "数学导师在 AMC（美国数学竞赛）及 Waterloo（CEMC）数学竞赛中名列前茅，成绩公开可查。",
+      en: "Our math tutor places among the top in AMC (American Mathematics Competitions) and Waterloo (CEMC) math contests (publicly verifiable).",
     },
     english: {
-      zh: "英语导师：就读于 Brébeuf 最高级别的英语课程，成绩优异。",
-      en: "English tutor: enrolled in the highest level of English offered at Brébeuf, with excellent results.",
+      zh: "英语导师就读于 Brébeuf 最高级别的英语课程，是学校要求最严格的英语班，成绩优异。",
+      en: "Our English tutor is placed in the highest level of English at Brébeuf, one of the school's most demanding streams, with excellent results.",
     },
     french: {
-      zh: "法语导师：曾多次在 Brébeuf 的写作比赛中获奖。",
-      en: "French tutor: multiple-time winner of writing contests at Brébeuf.",
+      zh: "法语导师曾多次赢得 Brébeuf 写作比赛，是学校公认的优秀写手。",
+      en: "Our French tutor has won Brébeuf's writing competitions multiple times, recognised as one of the school's top student writers.",
     },
   },
   howItWorks: {
@@ -114,7 +114,7 @@ export const content = {
     ] as { label: Bi; price: string }[],
     note: {
       zh: "建议参加全部三门课，效果更全面，也更划算。",
-      en: "We recommend all three subjects — more complete preparation, better value.",
+      en: "We recommend all three subjects: more complete preparation, better value.",
     },
   },
   whoItsFor: {
@@ -127,8 +127,8 @@ export const content = {
   infoSession: {
     title: { zh: "说明会", en: "Information session" },
     body: {
-      zh: "说明会将于6月19日晚上7点至9点举行，欢迎所有家长参加。届时会介绍收费、课程安排、备考方式等详细信息，并设有问答环节。地点稍后确认；如有变动，我们会及时通知。",
-      en: "Our information session is on June 19, 7:00–9:00 PM — all parents welcome. We'll cover pricing, the class schedule, and how we prepare the children, with a Q&A. Location to be confirmed; we'll notify you of any changes.",
+      zh: "说明会将于6月19日晚上7点至9点举行，欢迎所有家长参加。届时会介绍收费、课程安排、备考方式等详细信息，并设有问答环节。活动将在线上举行（Zoom）。",
+      en: "Our information session is on June 19, 7:00 to 9:00 PM. All parents welcome. We'll cover pricing, the class schedule, and how we prepare the children, with a Q&A. The session will be held online (Zoom).",
     },
     enrolNote: {
       zh: "报名将于 6 月 26 日正式开始。",
@@ -139,42 +139,28 @@ export const content = {
     title: { zh: "我们的优势", en: "Why choose Tutela" },
     intro: {
       zh: "我们把最关键的几件事做好，帮孩子稳稳通过中学入学考试。",
-      en: "We do the few things that matter most well — to get your child through the secondary admission exam.",
+      en: "We focus on the few things that matter most to get your child through the secondary admission exam.",
     },
     items: [
       {
-        title: { zh: "小班教学", en: "Small classes" },
+        title: { zh: "专为入学考试设计", en: "Built for the admission exam" },
         body: {
-          zh: "每组 1–10 人，名额有限，每个孩子都能得到充分关注。",
-          en: "Groups of 1–10 with limited spots, so every child gets real attention.",
+          zh: "每节课都围绕中学入学考试展开，不是通识补习，而是针对这场考试的专项备考。",
+          en: "Every class is built around the secondary admission exam. Not general academic tutoring, but preparation targeted at this specific test.",
         },
       },
       {
-        title: { zh: "刚考过的尖子生授课", en: "Taught by students who just passed" },
+        title: { zh: "小班，名额有限", en: "Small groups, limited spots" },
         body: {
-          zh: "导师来自魁北克顶尖中学（包括 Collège Jean-de-Brébeuf），刚刚考过同样的入学考试，最清楚考什么、怎么准备。",
-          en: "Our tutors attend top Quebec schools (incl. Collège Jean-de-Brébeuf) and just sat the same exams — they know exactly what's tested and how to prepare.",
+          zh: "每组 1–10 人，每个孩子都能得到导师的真正关注，而不是在大班里被忽视。",
+          en: "Groups of 1–10 so every child gets genuine attention, not lost in a large class.",
         },
       },
       {
-        title: { zh: "全科覆盖", en: "All three subjects" },
+        title: { zh: "课外随时答疑", en: "Help outside of class" },
         body: {
-          zh: "数学、法语、英语三门核心科目，按年级和报名人数分组。",
-          en: "Math, French, and English — the three core subjects, grouped by grade and enrolment.",
-        },
-      },
-      {
-        title: { zh: "24/7 在线答疑", en: "24/7 question support" },
-        body: {
-          zh: "孩子随时遇到不懂的问题，我们全天候在线解答，不必等到下次上课。",
-          en: "Whenever your child gets stuck, we're online to answer — no need to wait for the next class.",
-        },
-      },
-      {
-        title: { zh: "灵活上课", en: "Flexible format" },
-        body: {
-          zh: "周六上午授课，线上线下结合，按孩子的情况安排。",
-          en: "Saturday mornings, in-person and online combined, arranged to suit your child.",
+          zh: "孩子课后遇到不懂的问题，随时可以联系我们，不必等到下次上课。",
+          en: "When your child gets stuck outside of class, we're available to answer. No need to wait until the next session.",
         },
       },
     ] as { title: Bi; body: Bi }[],
@@ -189,14 +175,14 @@ export const content = {
       {
         name: { zh: "数学", en: "Math" },
         blurb: {
-          zh: "入学考试的核心，重点突破题型与解题速度。",
-          en: "The core of the exam: question types and solving speed.",
+          zh: "考试重在逻辑推理与解题策略，训练孩子有条理地分析问题。",
+          en: "The exam focuses on logical reasoning and problem-solving strategy. We train children to approach problems methodically.",
         },
         covers: [
-          { zh: "数与运算：分数、小数的熟练计算", en: "Number sense: fluent work with fractions and decimals" },
-          { zh: "应用题的审题与解题策略", en: "Reading and solving word problems with clear strategies" },
-          { zh: "几何、图形与空间观念", en: "Geometry, shapes, and spatial reasoning" },
-          { zh: "考试常见题型与时间管理", en: "Common exam question types and time management" },
+          { zh: "逻辑推理：规律识别与有序推导", en: "Logical reasoning: spotting patterns and working through problems step by step" },
+          { zh: "数感：分数、小数与基本运算", en: "Number sense: fractions, decimals, and arithmetic" },
+          { zh: "应用题的审题与解题策略", en: "Word problems: careful reading and structured problem-solving" },
+          { zh: "几何与空间推理", en: "Geometry and spatial reasoning" },
         ] as Bi[],
       },
       {
@@ -208,21 +194,21 @@ export const content = {
         covers: [
           { zh: "阅读理解：抓住文章重点与细节", en: "Reading comprehension: main ideas and details" },
           { zh: "写作：结构清晰、表达准确", en: "Writing: clear structure and accurate expression" },
-          { zh: "语法与词汇的系统巩固", en: "Systematic grammar and vocabulary review" },
+          { zh: "语法应用：在阅读与写作中理解和运用", en: "Grammar in context: applied through reading and writing tasks" },
           { zh: "答题技巧与考试节奏", en: "Answering technique and exam pacing" },
         ] as Bi[],
       },
       {
         name: { zh: "英语", en: "English" },
         blurb: {
-          zh: "理解与表达并重，打好语言基础。",
-          en: "Comprehension and expression, building a solid base.",
+          zh: "以英语分班测试为目标，重点培养阅读理解与写作表达能力。",
+          en: "Reading and writing focused on scoring well on the English placement test.",
         },
         covers: [
-          { zh: "阅读理解与词汇积累", en: "Reading comprehension and vocabulary" },
-          { zh: "写作与口头表达", en: "Writing and spoken expression" },
-          { zh: "基础语法与常用句型", en: "Foundational grammar and sentence patterns" },
-          { zh: "语感培养与日常运用", en: "Building language sense and everyday use" },
+          { zh: "阅读理解：主旨把握与细节提取", en: "Reading comprehension: main ideas and details" },
+          { zh: "写作：有条理地表达观点", en: "Writing: expressing ideas clearly and with structure" },
+          { zh: "词汇积累与语言感知", en: "Vocabulary and language sense" },
+          { zh: "备战英语分班测试", en: "Preparing for the English placement test" },
         ] as Bi[],
       },
     ] as { name: Bi; blurb: Bi; covers: Bi[] }[],
@@ -247,15 +233,15 @@ export const content = {
   philosophy: {
     title: { zh: "为什么学生会进步", en: "Why students improve" },
     intro: {
-      zh: "我们的方法很简单：用刚刚走过这条路的人，带还在路上的孩子。",
-      en: "Our approach is simple — students who just walked the path guide the ones still on it.",
+      zh: "我们的方法很简单：用走过这条路的人，带还在路上的孩子。",
+      en: "Our approach is simple: students who've walked the path guide the ones still on it.",
     },
     principles: [
       {
         title: { zh: "真正懂这场考试", en: "We actually know this exam" },
         body: {
-          zh: "我们刚刚考过同样的入学考试，最清楚考什么、该怎么准备，帮孩子少走弯路。",
-          en: "We just sat the same admission exams, so we know exactly what they test and how to prepare — fewer detours for your child.",
+          zh: "我们亲身经历过同样的入学考试，最清楚考什么、该怎么准备，帮孩子少走弯路。",
+          en: "We've sat the same admission exams, so we know exactly what they test and how to prepare, with fewer detours for your child.",
         },
       },
       {
@@ -281,8 +267,8 @@ export const content = {
         date: { zh: "6 月 19 日", en: "June 19" },
         label: { zh: "家长说明会 · 晚 7–9 点", en: "Parent info session · 7–9 PM" },
         note: {
-          zh: "介绍收费、课程安排与备考方式，并设有问答环节。地点稍后确认。",
-          en: "Covers pricing, schedule, and how we prepare students, with a Q&A. Location to be confirmed.",
+          zh: "介绍收费、课程安排与备考方式，并设有问答环节。活动在线上举行（Zoom）。",
+          en: "Covers pricing, schedule, and how we prepare students, with a Q&A. Held online (Zoom).",
         },
       },
       {
@@ -290,7 +276,7 @@ export const content = {
         label: { zh: "开放报名", en: "Enrollment opens" },
         note: {
           zh: "正式开始报名，名额有限，报满即止。",
-          en: "Registration opens — limited spots, first come first served.",
+          en: "Registration opens. Limited spots, first come first served.",
         },
       },
     ] as { date: Bi; label: Bi; note: Bi }[],
@@ -317,7 +303,7 @@ export const content = {
       q: { zh: "你们是怎么收费的？", en: "How do you charge?" },
       a: {
         zh: "小组课程 15$/小时/科目。选1门15$，选2门30$，选3门40$（套餐优惠）。一对一价格因导师而异，请私信。",
-        en: "Group classes are $15/hour/subject. 1 subject $15, 2 subjects $30, 3 subjects $40 (bundle). One-on-one pricing varies by tutor — please message us.",
+        en: "Group classes are $15/hour/subject. 1 subject $15, 2 subjects $30, 3 subjects $40 (bundle). One-on-one pricing varies by tutor; please message us.",
       },
     },
     {
@@ -345,7 +331,7 @@ export const content = {
       q: { zh: "是线上还是线下上课？", en: "Are classes online or in person?" },
       a: {
         zh: "线上、线下我们都提供，根据学生的情况安排：线上报名人数足够就开线上班，线下人数足够就开线下班。",
-        en: "We offer both online and in-person, arranged around what students need — if enough students sign up online we run an online class, and likewise for in-person.",
+        en: "We offer both online and in-person, arranged around what students need: if enough students sign up online we run an online class, and likewise for in-person.",
       },
     },
     {
@@ -359,14 +345,14 @@ export const content = {
       q: { zh: "孩子课后有问题，找谁问？", en: "Where can my child ask questions after class?" },
       a: {
         zh: "我们提供 24/7 在线答疑，孩子随时遇到不懂的问题，都可以联系我们，不必等到下次上课。",
-        en: "We offer 24/7 question support — whenever your child gets stuck, they can reach us, no need to wait for the next class.",
+        en: "We offer 24/7 question support: whenever your child gets stuck, they can reach us, no need to wait for the next class.",
       },
     },
     {
       q: { zh: "课程由谁授课？", en: "Who teaches the classes?" },
       a: {
         zh: "授课由我们的导师团队负责，每位导师教自己的科目。",
-        en: "Classes are taught by our tutor team — each tutor teaches their own subject.",
+        en: "Classes are taught by our tutor team; each tutor teaches their own subject.",
       },
     },
     {

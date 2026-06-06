@@ -71,7 +71,7 @@ export default function TermsPage() {
             <p>
               Exam outcomes depend on many factors beyond the scope of tutoring, including
               the student&apos;s preparation, effort, individual circumstances, and the policies
-              of the schools to which they apply. Our role is to support and prepare — not
+              of the schools to which they apply. Our role is to support and prepare, not
               to guarantee any specific result.
             </p>
           </div>
@@ -79,7 +79,7 @@ export default function TermsPage() {
 
         <section>
           <h2 className="font-serif text-xl font-semibold text-ink sm:text-2xl">
-            4. Enrollment and Fees
+            4. Enrolment and Fees
           </h2>
           <div className="mt-3 space-y-4 text-base leading-relaxed">
             <p>Current group tutoring rates:</p>
@@ -89,7 +89,7 @@ export default function TermsPage() {
               <li>3 subjects: $40 / hour (bundle discount)</li>
             </ul>
             <p>
-              1-on-1 sessions are available by private arrangement — rates are set by the
+              1-on-1 sessions are available by private arrangement; rates are set by the
               individual tutor and communicated directly.
             </p>
             <p>
@@ -101,20 +101,7 @@ export default function TermsPage() {
 
         <section>
           <h2 className="font-serif text-xl font-semibold text-ink sm:text-2xl">
-            5. First Lesson Free
-          </h2>
-          <div className="mt-3 space-y-4 text-base leading-relaxed">
-            <p>
-              We offer the first lesson free so your child can experience the class before
-              committing. If you choose to continue after the first lesson, standard fees apply
-              from the second lesson onward. This offer applies once per student.
-            </p>
-          </div>
-        </section>
-
-        <section>
-          <h2 className="font-serif text-xl font-semibold text-ink sm:text-2xl">
-            6. Cancellations and Missed Classes
+            5. Cancellations and Missed Classes
           </h2>
           <div className="mt-3 space-y-4 text-base leading-relaxed">
             <p>
@@ -135,7 +122,7 @@ export default function TermsPage() {
 
         <section>
           <h2 className="font-serif text-xl font-semibold text-ink sm:text-2xl">
-            7. Conduct
+            6. Conduct
           </h2>
           <div className="mt-3 space-y-4 text-base leading-relaxed">
             <p>
@@ -148,12 +135,12 @@ export default function TermsPage() {
 
         <section>
           <h2 className="font-serif text-xl font-semibold text-ink sm:text-2xl">
-            8. Intellectual Property
+            7. Intellectual Property
           </h2>
           <div className="mt-3 space-y-4 text-base leading-relaxed">
             <p>
-              All materials provided by Tutela — including handouts, practice problems, and
-              session recordings (if any) — are for the enrolled student&apos;s personal use only.
+              All materials provided by Tutela, including handouts, practice problems, and
+              session recordings (if any), are for the enrolled student&apos;s personal use only.
               Redistribution, resale, or republication without written permission is prohibited.
             </p>
           </div>
@@ -161,7 +148,7 @@ export default function TermsPage() {
 
         <section>
           <h2 className="font-serif text-xl font-semibold text-ink sm:text-2xl">
-            9. Limitation of Liability
+            8. Limitation of Liability
           </h2>
           <div className="mt-3 space-y-4 text-base leading-relaxed">
             <p>
@@ -179,7 +166,7 @@ export default function TermsPage() {
 
         <section>
           <h2 className="font-serif text-xl font-semibold text-ink sm:text-2xl">
-            10. Website Use
+            9. Website Use
           </h2>
           <div className="mt-3 space-y-4 text-base leading-relaxed">
             <p>
@@ -192,7 +179,7 @@ export default function TermsPage() {
 
         <section>
           <h2 className="font-serif text-xl font-semibold text-ink sm:text-2xl">
-            11. Governing Law
+            10. Governing Law
           </h2>
           <div className="mt-3 space-y-4 text-base leading-relaxed">
             <p>
@@ -204,7 +191,7 @@ export default function TermsPage() {
 
         <section>
           <h2 className="font-serif text-xl font-semibold text-ink sm:text-2xl">
-            12. Changes to These Terms
+            11. Changes to These Terms
           </h2>
           <div className="mt-3 space-y-4 text-base leading-relaxed">
             <p>
@@ -217,7 +204,7 @@ export default function TermsPage() {
 
         <section>
           <h2 className="font-serif text-xl font-semibold text-ink sm:text-2xl">
-            13. Contact
+            12. Contact
           </h2>
           <div className="mt-3 space-y-4 text-base leading-relaxed">
             <p>
