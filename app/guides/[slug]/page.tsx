@@ -9,8 +9,9 @@ export function generateStaticParams() {
   return guides.map((g) => ({ slug: g.slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const g = getGuide(params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const g = getGuide(slug);
   if (!g) return {};
   return {
     title: `${g.title.zh} | Tutela`,
@@ -25,8 +26,9 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   };
 }
 
-export default function GuidePage({ params }: { params: { slug: string } }) {
-  const g = getGuide(params.slug);
+export default async function GuidePage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const g = getGuide(slug);
   if (!g) notFound();
 
   const jsonLd = {
