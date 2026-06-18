@@ -32,8 +32,8 @@ export const content = {
     },
   },
   announcement: {
-    zh: "6 月 19 日 家长说明会 · 6 月 26 日 开放报名",
-    en: "June 19 parent info session · Enrollment opens June 26",
+    zh: "6 月 19 日 家长说明会 · 即日起开放报名",
+    en: "June 19 parent info session · Enrollment now open",
   },
   hero: {
     tag: { zh: "蒙特利尔 · 中学入学考试备考", en: "Montreal · Secondary admission exam prep" },
@@ -131,8 +131,8 @@ export const content = {
       en: "Our information session is on June 19, 7:00 to 9:00 PM. All parents welcome. We'll cover pricing, the class schedule, and how we prepare the children, with a Q&A. The session will be held online (Zoom).",
     },
     enrolNote: {
-      zh: "报名将于 6 月 26 日正式开始。",
-      en: "Enrollment opens June 26.",
+      zh: "报名现已开放，名额有限，先到先得。",
+      en: "Enrollment is now open. Limited spots, first come first served.",
     },
   },
   advantages: {
@@ -272,11 +272,11 @@ export const content = {
         },
       },
       {
-        date: { zh: "6 月 26 日", en: "June 26" },
+        date: { zh: "6 月 19 日", en: "June 19" },
         label: { zh: "开放报名", en: "Enrollment opens" },
         note: {
-          zh: "正式开始报名，名额有限，报满即止。",
-          en: "Registration opens. Limited spots, first come first served.",
+          zh: "报名现已开放，名额有限，报满即止。",
+          en: "Enrollment is now open. Limited spots, first come first served.",
         },
       },
     ] as { date: Bi; label: Bi; note: Bi }[],
